@@ -555,11 +555,4 @@ namespace neopixel {
         CounterClockwise,
         Shortest
     }
-    //% help=basic/show-leds
-    //% weight=95 blockGap=8
-    //% imageLiteral=1 async
-    //% blockId=device_show_leds
-    //% block="show leds" icon="\uf00a"
-    //% parts="ledmatrix" interval.defl=400 shim=basic::showLeds
-    function showLeds(leds: string, interval?: number): void;
 }
