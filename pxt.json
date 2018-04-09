@@ -12,7 +12,8 @@
         "README.md",
         "main.ts",
         "_locales/zh/joystick-strings.json",
-        "rgb.cpp"
+        "rgb.cpp",
+        "rgb.d.ts"
     ],
     "testFiles": [
         "test.ts"
