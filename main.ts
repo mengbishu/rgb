@@ -313,6 +313,6 @@ namespace pixel {
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
     //% parts="ledmatrix" interval.defl=400 shim=basic::lleds
-    function lleds(leds: string, interval?: number): void { };
+    declare function lleds(leds: string, interval?: number): void;
 
 }
