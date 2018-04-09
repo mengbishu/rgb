@@ -322,6 +322,6 @@ namespace pixel {
     //% weight=96
     //% blockId=device_show_number block="show|number %number" blockGap=8
     //% async
-    //% parts="ledmatrix" interval.defl=150 shim=basic::showNumber
+    //% parts="ledmatrix" interval.defl=150 shim=basic::showNumber  
     declare function showNumber(value: number, interval?: number): void;    
 }
