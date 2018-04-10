@@ -21,13 +21,11 @@ declare namespace rgb {
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
     //% imageLiteral=1 
-    //% shim = rgb:: createI
-    //% parts="ledmatrix" 
+    //% shim = rgb:: createI 
     function createI(leds: string): void;
 
     //% weight=74 help=images/create-big-image
     //% blockId=device_build_big_image block="create big image" imageLiteral=2
-    //% shim = rgb:: createBigI
-    //% parts="ledmatrix" 
+    //% shim = rgb:: createBigI 
     function createBigI(leds: string): Image;
 }
