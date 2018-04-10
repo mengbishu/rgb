@@ -10,9 +10,8 @@
     },
     "files": [
         "README.md",
-        
-        "rgb.cpp",
-        "rgb.d.ts"
+        "main.ts",
+        "rgb.cpp"
     ],
     "testFiles": [
         "test.ts"
