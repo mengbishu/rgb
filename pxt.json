@@ -13,7 +13,7 @@
         "main.ts",
         "_locales/zh/joystick-strings.json",
         "rgb.cpp",
-        "rgb.d.ts"
+        "main.d.ts"
     ],
     "testFiles": [
         "test.ts"
