@@ -122,7 +122,23 @@ namespace pixel {
             this.brightness = brightness & 0xff;
         }
 
+        setPixel(x: number, y: number, color: number): void { 
+            let offset = y*8+x
+            this.setPixelColor(offset,color)
+        }        
 
+        setChar(char:string,color:number): void { 
+
+        }
+
+        //% blockId="showNumber" block="show number %num"
+        //% parts="neopixel"
+        showNumber(num:number,color:number): void { 
+
+            this.setChar("num",color)
+        }
+
+        
         /**
          * Shift LEDs forward and clear with zeros.
          * You need to call ``show`` to make the changes visible.

@@ -30,17 +30,6 @@ namespace rgb {
       }
     }
 
-    //% weight=75 help=images/create-image
-    //% blockId=device_build_image block="create image"
-    //% parts="ledmatrix" 
-    void createI(ImageLiteral leds) {
-      return;
-    }
 
-    //% weight=74 help=images/create-big-image
-    //% blockId=device_build_big_image block="create big image" imageLiteral=2
-    Image createBigI(ImageLiteral leds) {
-        return MicroBitImage(imageBytes(leds)).clone().leakData();
-    }
     
 }
