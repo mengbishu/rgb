@@ -27,7 +27,7 @@ declare namespace rgb {
     //% parts="ledmatrix" interval.defl=150 shim=rgb::showN  
     function showN(value: number, interval?: number): void;
 
-        /**
+    /**
      * Creates an image that fits on the LED screen.
      */
     //% weight=75 help=images/create-image
