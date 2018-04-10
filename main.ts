@@ -39,7 +39,7 @@ enum NeoPixelMode {
 /**
  * Functions to operate NeoPixel strips.
  */
-//% color=#0078D7 weight=100 icon="\uf00a"
+//% color=#0078D7  icon="\uf00a"
 namespace pixel {
     /**
      * A NeoPixel strip
