@@ -1,7 +1,7 @@
     /**
      * Provides access to basic micro:bit functionality.
      */
-    //% color=#0078D7 weight=100 icon="\uf00a"
+    //% color=#0078D7 icon="\uf00a"
 declare namespace rgb {
     /**
      * Draws an image on the LED screen.
