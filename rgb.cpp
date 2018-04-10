@@ -15,7 +15,7 @@ namespace rgb {
     //% blockId=device_show_number block="show|number %number" blockGap=8
     //% async
     //% parts="ledmatrix"
-    void showNumber(int value, int interval = 150) {
+    void showN(int value, int interval = 150) {
       if (interval <= 0)
         interval = 1;
       ManagedString t(value);
@@ -39,10 +39,28 @@ namespace rgb {
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
     //% parts="ledmatrix"
-    void showLeds(ImageLiteral leds, int interval = 400) {
+    void lleds(ImageLiteral leds, int interval = 400) {
       uBit.display.print(MicroBitImage(imageBytes(leds)), 0, 0, 0, interval);
     }
 
+    /**
+     * Creates an image that fits on the LED screen.
+     */
+    //% weight=75 help=images/create-image
+    //% blockId=device_build_image block="create image"
+    //% parts="ledmatrix"
+    Image createI(ImageLiteral leds) {
+        return MicroBitImage(imageBytes(leds)).clone().leakData();
+    }
 
+    /**
+     * Creates an image with 2 frames.
+     */
+    //% weight=74 help=images/create-big-image
+    //% blockId=device_build_big_image block="create big image" imageLiteral=2
+    //% parts="ledmatrix"
+    Image createBigI(ImageLiteral leds) {
+        return createI(leds);
+    }
     
 }

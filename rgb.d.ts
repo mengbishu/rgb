@@ -4,11 +4,12 @@ declare namespace rgb {
      * @param leds the pattern of LED to turn on/off
      * @param interval time in milliseconds to pause after drawing
      */
-    /**
-     * Gets the RGB value of a known color
-    */
-    //% weight=2 blockGap=8
-    //% blockId="neopixel_colors" block="lleds"
+    //% help=basic/show-leds
+    //% weight=95 blockGap=8
+    //% imageLiteral=1 async
+    //% blockId=device_show_leds
+    //% block="show leds" icon="\uf00a"
+    //% parts="ledmatrix" interval.defl=400 shim=rgb::lleds
     function lleds(leds: string, interval?: number): void;
 
     /**
@@ -19,6 +20,22 @@ declare namespace rgb {
     //% weight=96
     //% blockId=device_show_number block="show|number %number" blockGap=8
     //% async
-    //% parts="ledmatrix" interval.defl=150 shim=basic::showNumber  
-    function showNumber(value: number, interval?: number): void;
+    //% parts="ledmatrix" interval.defl=150 shim=rgb::showN  
+    function showN(value: number, interval?: number): void;
+
+        /**
+     * Creates an image that fits on the LED screen.
+     */
+    //% weight=75 help=images/create-image
+    //% blockId=device_build_image block="create image"
+    //% parts="ledmatrix" imageLiteral=1 shim=rgb::createI
+    function createI(leds: string): Image;
+
+    /**
+     * Creates an image with 2 frames.
+     */
+    //% weight=74 help=images/create-big-image
+    //% blockId=device_build_big_image block="create big image" imageLiteral=2
+    //% parts="ledmatrix" shim=rgb::createBigI
+    function createBigI(leds: string): Image;
 }
