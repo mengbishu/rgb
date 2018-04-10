@@ -24,7 +24,7 @@ declare namespace rgb {
     //% weight=96
     //% blockId=device_show_number block="show|number %number" blockGap=8
     //% async
-    //% parts="ledmatrix" interval.defl=150 shim=rgb::showN  
+    //% interval.defl=150 shim=rgb::showN  
     function showN(value: number, interval?: number): void;
 
     /**
@@ -32,7 +32,7 @@ declare namespace rgb {
      */
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
-    //% parts="ledmatrix" imageLiteral=1 shim=rgb::createI
+    //% imageLiteral=1 shim=rgb::createI
     function createI(leds: string): void;
 
     /**
