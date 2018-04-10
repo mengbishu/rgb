@@ -11,6 +11,7 @@
     "files": [
         "README.md",
         "main.ts",
+        "rgb.d.ts",
         "rgb.cpp"
     ],
     "testFiles": [

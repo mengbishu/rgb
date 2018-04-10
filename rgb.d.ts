@@ -13,7 +13,7 @@ declare namespace rgb {
     //% imageLiteral=1 async
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
-    //% parts="ledmatrix" interval.defl=400 shim=rgb::lleds
+    //% interval.defl=400 shim=rgb::lleds
     function lleds(leds: string, interval?: number): void;
 
     /**
@@ -33,7 +33,7 @@ declare namespace rgb {
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
     //% parts="ledmatrix" imageLiteral=1 shim=rgb::createI
-    function createI(leds: string): Image;
+    function createI(leds: string): void;
 
     /**
      * Creates an image with 2 frames.
