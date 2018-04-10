@@ -10,10 +10,10 @@
     },
     "files": [
         "README.md",
-
+        "main.d.ts",
         "_locales/zh/joystick-strings.json",
         "rgb.cpp",
-        "rgb.d.ts"
+
     ],
     "testFiles": [
         "test.ts"
