@@ -32,6 +32,7 @@ namespace rgb {
 
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
+    //% parts="ledmatrix" 
     void createI(ImageLiteral leds) {
       return;
     }
