@@ -10,14 +10,14 @@ namespace rgb {
     //% weight=95 blockGap=8
     //% imageLiteral=1 async
     //% blockId=device_show_leds
-    //% block="show leds" icon="\uf00a"
+    //% block="show leds" icon="\uf00a" imageLiteral=4
     void lleds(ImageLiteral leds, int interval = 400) {
       uBit.display.print(MicroBitImage(imageBytes(leds)), 0, 0, 0, interval);
     }
 
     //% help=basic/show-number
     //% weight=96
-    //% blockId=device_show_number block="show|number %number" blockGap=8
+    //% blockId=device_show_number block="show|number %number" blockGap=8 imageLiteral=3
     //% async
     void showN(int value, int interval = 150) {
       if (interval <= 0)
@@ -31,14 +31,14 @@ namespace rgb {
     }
 
     //% weight=75 help=images/create-image
-    //% blockId=device_build_image block="create image"
+    //% blockId=device_build_image block="create image" imageLiteral=1
     //% parts="ledmatrix" 
     void createI(ImageLiteral leds) {
       return;
     }
 
     //% weight=74 help=images/create-big-image
-    //% blockId=device_build_big_image block="create big image"
+    //% blockId=device_build_big_image block="create big image" imageLiteral=2
     Image createBigI(ImageLiteral leds) {
         return MicroBitImage(imageBytes(leds)).clone().leakData();
     } 
