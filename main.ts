@@ -46,7 +46,8 @@ namespace pixel {
      */
     let chrs: string[] = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     let chr:number[] = [0x3C,0x66,0x42,0x42,0x42,0x66,0x3C,0x00,
-        0x10,0x70,0x10,0x10,0x10,0x10,0x7C,0x00,
+        0x10, 0x70, 0x10, 0x10, 0x10, 0x10, 0x7C, 0x00,
+        
         0x3C,0x42,0x02,0x04,0x18,0x22,0x7E,0x00,
         0x3C,0x42,0x02,0x1C,0x02,0x42,0x3C,0x00,
         0x0C,0x14,0x24,0x44,0x7E,0x04,0x0C,0x00,
@@ -142,20 +143,20 @@ namespace pixel {
             }
         }
 
-        //% blockId="showPixel" block="display pixel %x %y color %color"
+        //% blockId="showPixel" block="display pixel %x| %y| color %color"
         //% x.min=0 x.max=8
         //% y.min=0 y.max=8
         showPixel(x: number, y: number, color: NeoPixelColors): void{
             this.setPixel(x, y, color);
         }
 
-        //% blockId="showNumber" block="show number %num color %color"
+        //% blockId="showNumber" block="show number %num| color %color"
         //% parts="neopixel"
         showNumber(num:number,color:NeoPixelColors): void { 
             this.showString(num.toString(),color)
         }
 
-        //% blockId="showString" block="display string %str color %color"
+        //% blockId="showString" block="display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
             let len = str.length;
             let i = 0;
