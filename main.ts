@@ -188,8 +188,6 @@ namespace pixel {
                 this.setChar(str[i], color);
             }
         }
-        
-
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
         //% weight=85 blockGap=8
@@ -234,8 +232,6 @@ namespace pixel {
         setBrightness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
-
-
 
         //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
         //% weight=40
