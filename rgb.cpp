@@ -38,7 +38,7 @@ namespace rgb {
     }
 
     //% weight=74 help=images/create-big-image
-    //% blockId=device_build_big_image block="create big image" imageLiteral=2
+    //% blockId=device_build_big_image block="create big image"
     Image createBigI(ImageLiteral leds) {
         return MicroBitImage(imageBytes(leds)).clone().leakData();
     } 
