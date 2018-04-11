@@ -118,9 +118,9 @@ namespace pixel {
             index *= 8; 
             for (i = 0; i < 8; i++) {
                 for (j = 0; j < 8; j++) {
-                    if (((this.chr[index+i] >> j) & 0x1) == 1) {
+                    //if (((this.chr[index+i] >> j) & 0x1) == 1) {
                         this.setPixel(j, i, color)
-                    }
+                    //}
                 }
             }
         }
