@@ -54,6 +54,8 @@ namespace pixel {
         _mode: NeoPixelMode;
         _matrixWidth: number; // number of leds in a matrix - if any
 
+        arr: Array<number> = [1, 2, 3];
+
         /**
          * Shows all LEDs to a given color (range 0-255 for r, g, b). 
          * @param rgb RGB color of the LED
