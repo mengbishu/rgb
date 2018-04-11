@@ -103,50 +103,7 @@ namespace pixel {
             this.brightness = brightness & 0xff;
         }
 
-        setPixel(x: number, y: number, color: number): void { 
-            let offset = y*8+x
-            this.setPixelColor(offset,color)
-        }        
 
-        setChar(ch: string, color: number): void { 
-            var i, j,index;
-            for (i = 0; i < 62; i++) { 
-                if (ch == this.chrs[i]) { 
-                    index = i;
-                }
-            }
-            index *= 8; 
-            for (i = 0; i < 8; i++) {
-                for (j = 0; j < 8; j++) {
-                    //if (((this.chr[index+i] >> j) & 0x1) == 1) {
-                        this.setPixel(j, i, color)
-                    //}
-                }
-            }
-        }
-
-        //% blockId="showPixel" block="display pixel %x %y color %color"
-        //% x.min=0 x.max=8
-        //% y.min=0 y.max=8
-        showPixel(x: number, y: number, color: NeoPixelColors): void{
-            this.setPixel(x, y, color);
-        }
-
-        //% blockId="showNumber" block="show number %num"
-        //% parts="neopixel"
-        showNumber(num:number,color:NeoPixelColors): void { 
-            this.setChar(num.toString(),color)
-        }
-
-        //% blockId="showString" block="display string %str color %color"
-        showString(str: string, color: NeoPixelColors): void{
-            var len = str.length;
-            var i = 0;
-            for (i = 0; i < len; i++){
-                this.setChar(str[i], color);
-            }
-            
-        }
 
         //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
         //% weight=40
