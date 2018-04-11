@@ -143,20 +143,20 @@ namespace pixel {
             }
         }
 
-        //% blockId="showPixel" block="display pixel %x| %y| color %color"
+        //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
         //% x.min=0 x.max=8
         //% y.min=0 y.max=8
         showPixel(x: number, y: number, color: NeoPixelColors): void{
             this.setPixel(x, y, color);
         }
 
-        //% blockId="showNumber" block="show number %num| color %color"
+        //% blockId="showNumber" block="%strip| show number %num| color %color"
         //% parts="neopixel"
         showNumber(num:number,color:NeoPixelColors): void { 
             this.showString(num.toString(),color)
         }
 
-        //% blockId="showString" block="display string %str| color %color"
+        //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
             let len = str.length;
             let i = 0;
