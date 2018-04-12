@@ -263,16 +263,6 @@ namespace pixel {
             this.setPixelRGB(pixeloffset, rgb);
         }
 
-        move(dir: moveDir) {
-            let i = 0;
-            let j = 0;
-            for (i = 0; i < 8; i++){
-                for (j = 0; j < 8; j++){
-                    
-                }
-            }
-        }
-
         show() {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
