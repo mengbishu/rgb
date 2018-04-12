@@ -157,7 +157,7 @@ namespace pixel {
         }
 
         display(color: number): void{
-            let i = 0;
+        /*    let i = 0;
             let j = 0;
             let k = 0;
             for(k = 0;k < 8; k++){
@@ -166,7 +166,7 @@ namespace pixel {
                         this.setPixel(k * 8, 7 - i, color);
                     }
                 }
-            }
+            }*/
         }
 
         setChar(color: number): void { 
