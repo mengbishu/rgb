@@ -163,7 +163,7 @@ namespace pixel {
             for(k = 0;k < 8; k++){
                 for(i = 0;i < 8; i++){
                     if (((screen[k] >> i) & 0x1) == 1) {
-                        this.setPixel(k , 7 - i, color);
+                        this.setPixel(7-i , k, color);
                     }
                 }
             }
@@ -180,14 +180,14 @@ namespace pixel {
             this.display(color);
             basic.pause(100);
 
-            if (this.len > 8) {
+/*            if (this.len > 8) {
                 while(k++ < this.len){
                     for (i = 0; i < 8; i++) {
                         screen[i] = (screen(i) << 1);
                     }
                     this.display(color);
-              }
-            }
+                }
+            }*/
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
@@ -210,7 +210,7 @@ namespace pixel {
 
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
-/*            let l = str.length;
+            let l = str.length;
             this.len = l*8;
             let i = 0;
             let index=0;
@@ -227,7 +227,7 @@ namespace pixel {
                 for (k = 0; k < 8; k++) {
                     queue[sub++] = chr[index * 8 + k];
                 }
-            }*/
+            }
             this.setChar(color);
         }
 
