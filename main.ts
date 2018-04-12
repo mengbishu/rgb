@@ -182,12 +182,12 @@ namespace pixel {
 
             if (this.len > 8) {
                 this.clear();
-                // while(k++ < this.len){
-                //     for (i = 0; i < 8; i++) {
-                //         screen[i] = (screen(i) << 1);
-                //     }
-                //     this.display(color);
-                // }
+                 while(k++ < this.len){
+                    for (i = 0; i < 8; i++) {
+                        screen[i] = (screen(i) << 1)|(queue[k/8]&(0x1<<7-i)>>(7-i));
+                    }
+                    this.display(color);
+                }
             }
         }
 
