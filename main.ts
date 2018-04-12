@@ -136,8 +136,8 @@ namespace pixel {
         0x00, 0x00, 0xE7, 0x66, 0x3C, 0x18, 0x10, 0xE0,
         0x00, 0x00, 0x7E, 0x44, 0x18, 0x32, 0x7E, 0x00];
     
-  //  let queue: number[] = [0];
-  //  let screen: number[] = [0];
+    let queue: number[] = [0];
+    let screen: number[] = [0];
     
     export class Strip {
         buf: Buffer;
@@ -148,7 +148,7 @@ namespace pixel {
         _length: number; // number of LEDs
         _mode: NeoPixelMode;
         _matrixWidth: number; // number of leds in a matrix - if any
-        len: number = 0;
+        len: number;
 
         setPixel(x: number, y: number, color: number): void { 
             let offset = y*8+x
@@ -157,7 +157,7 @@ namespace pixel {
         }
 
         display(color: number): void{
-        /*    let i = 0;
+            let i = 0;
             let j = 0;
             let k = 0;
             for(k = 0;k < 8; k++){
@@ -167,12 +167,12 @@ namespace pixel {
                     }
                 }
             }
-            */
+        
             this.show();
         }
 
         setChar(color: number): void { 
-        /*    let i = 0;
+            let i = 0;
             let j = 0;
             let k = 7;
             
@@ -190,7 +190,7 @@ namespace pixel {
                     this.display(color);
               }
             }
-            */
+            
             this.show();
         }
 
@@ -214,7 +214,7 @@ namespace pixel {
 
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
-    /*        let l = str.length;
+            let l = str.length;
             this.len = l*8;
             let i = 0;
             let index=0;
@@ -232,12 +232,12 @@ namespace pixel {
                     queue[sub++] = chr[index * 8 + k];
                 }
             }
-    */        this.setChar(color);
+            this.setChar(color);
         }
 
         //% blockId="showDir" block="%strip/ show dir %dir| color %color"
         showDir(dir: Direction,color:NeoPixelColors): void{
-        /*    let i=0;
+            let i=0;
             let j=0;
             let index=0;            
             index = dir*8; 
@@ -248,7 +248,6 @@ namespace pixel {
                     }
                 }
             }
-        */
             this.show();     
         }
 
