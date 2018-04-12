@@ -188,6 +188,7 @@ namespace pixel {
                         screen[i] = (screen[i] << 1)|(queue[k/8]&(0x1<<7-i)>>(7-i));
                         i++;
                     }
+                    this.clear()
                     this.display(color);
                 }
             }
@@ -275,7 +276,7 @@ namespace pixel {
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
-//            this.show();
+            this.show();
         }
 
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
