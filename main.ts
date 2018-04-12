@@ -24,7 +24,7 @@ enum NeoPixelColors {
     Black = 0x000000
 }
 
-enum moveDir { 
+enum MoveDir { 
     right = 1,
     left = -1
 }
@@ -249,6 +249,7 @@ namespace pixel {
                 }
             }
         */
+            this.show();     
         }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
