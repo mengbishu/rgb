@@ -170,7 +170,7 @@ namespace pixel {
         }
 
         setChar(color: number): void { 
-/*            let i = 0;
+            let i = 0;
             let j = 0;
             let k = 7;
             
@@ -187,7 +187,7 @@ namespace pixel {
                     }
                     this.display(color);
               }
-            }*/
+            }
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
@@ -210,25 +210,7 @@ namespace pixel {
 
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
-/*            let l = str.length;
-            this.len = l*8;
-            let i = 0;
-            let index=0;
-            let j = 0;
-            let k = 0;
-            let sub = 0;
-            for (i = 0; i < l; i++){
-                for (j = 0; j < 62; j++) { 
-                    if (str[i] == chrs[j]) { 
-                        index = j;
-                        break;
-                    }
-                }
-                for (k = 0; k < 8; k++) {
-                    queue[sub++] = chr[index * 8 + k];
-                }
-            }
-            this.setChar(color);*/
+
         }
 
         //% blockId="showDir" block="%strip/ show dir %dir| color %color"
