@@ -180,14 +180,15 @@ namespace pixel {
             this.display(color);
             basic.pause(100);
 
-/*            if (this.len > 8) {
-                while(k++ < this.len){
-                    for (i = 0; i < 8; i++) {
-                        screen[i] = (screen(i) << 1);
-                    }
-                    this.display(color);
-                }
-            }*/
+            if (this.len > 8) {
+                this.clear();
+                // while(k++ < this.len){
+                //     for (i = 0; i < 8; i++) {
+                //         screen[i] = (screen(i) << 1);
+                //     }
+                //     this.display(color);
+                // }
+            }
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
