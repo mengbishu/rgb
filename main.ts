@@ -182,7 +182,8 @@ namespace pixel {
 
             if (this.len > 8) {
                 this.clear();
-                 while(k++ < this.len){
+                while (k < this.len) {
+                    k++;
                     for (i = 0; i < 8; i++) {
                         //screen[i] = (screen(i) << 1)|(queue[k/8]&(0x1<<7-i)>>(7-i));
                         i++;
