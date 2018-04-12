@@ -211,7 +211,7 @@ namespace pixel {
 
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
-            let l = str.length;
+    /*        let l = str.length;
 			this.len = l*8;
             let i = 0;
 			let index=0;
@@ -229,7 +229,7 @@ namespace pixel {
                     queue[sub++] = chr[index * 8 + k];
                 }
             }
-            this.setChar(color);
+    */        this.setChar(color);
         }
 
         //% blockId="showDir" block="%strip/ show dir %dir| color %color"
