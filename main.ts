@@ -170,7 +170,7 @@ namespace pixel {
         }
 
         setChar(color: number): void { 
-/*            let i = 0;
+            let i = 0;
             let j = 0;
             let k = 7;
             
@@ -183,11 +183,11 @@ namespace pixel {
             if (this.len > 8) {
                 while(k++ < this.len){
                     for (i = 0; i < 8; i++) {
-                        screen[i] = (queue(i) << 1) | (queue(k / 8) >> 7 - 1);
+                        screen[i] = (screen(i) << 1);
                     }
                     this.display(color);
               }
-            }*/
+            }
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
