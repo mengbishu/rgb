@@ -158,7 +158,7 @@ namespace pixel {
         }
 
         display(color: number): void{
-            let i = 0;
+        /*    let i = 0;
             let j = 0;
             let k = 0;
             for(k = 0;k < 8; k++){
@@ -168,10 +168,11 @@ namespace pixel {
                     }
                 }
             }
+            */
         }
 
         setChar(color: number): void { 
-            let i = 0;
+        /*    let i = 0;
             let j = 0;
             let k = 7;
             
@@ -188,7 +189,8 @@ namespace pixel {
                     }
                     this.display(color);
 				}
-			}
+            }
+            */
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
@@ -234,7 +236,7 @@ namespace pixel {
 
         //% blockId="showDir" block="%strip/ show dir %dir| color %color"
         showDir(dir: Direction,color:NeoPixelColors): void{
-            let i=0;
+        /*    let i=0;
             let j=0;
             let index=0;            
             index = dir*8; 
@@ -245,6 +247,7 @@ namespace pixel {
                     }
                 }
             }
+        */
         }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
