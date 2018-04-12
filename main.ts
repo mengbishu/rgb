@@ -167,12 +167,10 @@ namespace pixel {
                     }
                 }
             }
-        
-            this.show();
         }
 
         setChar(color: number): void { 
-            let i = 0;
+/*            let i = 0;
             let j = 0;
             let k = 7;
             
@@ -189,9 +187,7 @@ namespace pixel {
                     }
                     this.display(color);
               }
-            }
-            
-            this.show();
+            }*/
         }
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
@@ -214,7 +210,7 @@ namespace pixel {
 
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
-            let l = str.length;
+/*            let l = str.length;
             this.len = l*8;
             let i = 0;
             let index=0;
@@ -232,7 +228,7 @@ namespace pixel {
                     queue[sub++] = chr[index * 8 + k];
                 }
             }
-            this.setChar(color);
+            this.setChar(color);*/
         }
 
         //% blockId="showDir" block="%strip/ show dir %dir| color %color"
@@ -247,8 +243,7 @@ namespace pixel {
                         this.setPixel(j, 7-i, color)
                     }
                 }
-            }
-            this.show();     
+            }   
         }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
