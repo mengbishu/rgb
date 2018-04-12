@@ -188,6 +188,7 @@ namespace pixel {
                         screen[i] = (screen[i] << 1)|(queue[k/8]&(0x1<<7-i)>>(7-i));
                         i++;
                     }
+                    basic.pause(100)
                     this.clear()
                     this.display(color);
                 }
