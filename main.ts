@@ -181,11 +181,11 @@ namespace pixel {
             basic.pause(100);
 
             if (this.len > 1) {
-                while (k <= (this.len+1)) {
-                    k++;
+                while (k++ < (this.len+1)) {
+                    
                     for (i = 0; i < 8; i++) {
                         // this.clear();
-                        serial.writeLine("");
+                        
                         for (j = 0; j < 8; j++){
                             screen[j] =  (screen[j] << 1) |((queue[k * 8 + j] & (0x1 << (7-i)))>> (7-i));
                             
@@ -194,8 +194,9 @@ namespace pixel {
                         this.update();
                         this.display(color);
                         basic.pause(10);
+                        serial.writeLine("");
                         serial.writeNumber(queue[k]);
-                            serial.writeLine("");
+                        serial.writeLine("");
                     }
 
                 }
