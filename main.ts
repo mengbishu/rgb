@@ -172,7 +172,7 @@ namespace pixel {
         setChar(color: number): void { 
             let i = 0;
             let j = 0;
-            let k = 7;
+            let k = 0;
             
             for (i = 0; i < 8; i++){
                 screen[i] = queue[i];
@@ -180,21 +180,24 @@ namespace pixel {
             this.display(color);
             basic.pause(100);
 
-            if (this.len > 8) {
+            if (this.len > 1) {
                 this.clear();
                 while (k < this.len) {
                     k++;
                     for (i = 0; i < 8; i++) {
-                        screen[i] = (screen[i] << 1) | (queue[(k / 8)+i] & (0x1 << 7 - i) >> (7 - i));
-                        //i++;
-                        serial.writeNumber(11);
+                        for (j = 0; j < 8; j++){
+                            screen[j] = (screen[j] << i) | ((queue[k * 8 + j] & (0x1 << i)) >> i);
+                        }
                     }
-                    basic.pause(500)
-                    this.clear()
-                    this.display(color);
                 }
             }
         }
+
+        // screen[i] = (screen[i] << 1) | (queue[(k / 8)+i] & (0x1 << 7 - i) >> (7 - i));
+        //                 serial.writeNumber(11); 
+        // basic.pause(500)
+        //             this.clear()
+        //             this.display(color);
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
         //% x.min=0 x.max=8
@@ -217,7 +220,7 @@ namespace pixel {
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
             let l = str.length;
-            this.len = l*8;
+            this.len = l;
             let i = 0;
             let index=0;
             let j = 0;
