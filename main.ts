@@ -181,7 +181,7 @@ namespace pixel {
             basic.pause(100);
 
             if (this.len > 1) {
-                this.clear();
+               // this.clear();
                 while (k++ < (this.len-1)) {
                     for (i = 0; i < 8; i++) {
                         serial.writeLine("");
@@ -191,7 +191,7 @@ namespace pixel {
                             serial.writeLine("");
                         }
                         basic.pause(500);
-                        this.clear();
+                     //   this.clear();
                         this.display(color);
                     }
                 }
