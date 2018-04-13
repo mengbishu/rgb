@@ -190,9 +190,10 @@ namespace pixel {
                             serial.writeNumber((queue[k * 8 + j] & (0x1 << (7-i))) >> (7-i));
                             serial.writeLine("");
                         }
-                        basic.pause(500);
+                        
                      //   this.clear();
                         this.display(color);
+                        basic.pause(500);
                     }
                 }
             }
