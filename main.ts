@@ -295,7 +295,7 @@ namespace pixel {
                     }
                     
                     this.display(_smile[8]);
-                    for (j = 0; j < 8; i++){
+                    for (j = 0; j < 8; j++){
                         serial.writeNumber(screen[j]);
                     }
                     serial.writeNumber(99999);
