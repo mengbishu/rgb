@@ -282,7 +282,7 @@ namespace pixel {
             }
         }
 
-        showIcons(): void{
+        showIconsss(): void{
             let i = 0;
             let j = 0;
             switch (i) {
@@ -291,7 +291,7 @@ namespace pixel {
                         screen[i] = _smile[i];
                     }
                     this.display(_smile[8]);
-                    
+                    break;
             }
                 
         }
