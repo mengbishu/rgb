@@ -185,10 +185,11 @@ namespace pixel {
                 while (k < this.len) {
                     k++;
                     for (i = 0; i < 8; i++) {
-                        screen[i] = (screen[i] << 1)|(queue[k/8]&(0x1<<7-i)>>(7-i));
+                        screen[i] = (screen[i] << 1);
+                        // |(queue[k/8]&(0x1<<7-i)>>(7-i))
                         i++;
                     }
-                    basic.pause(100)
+                    basic.pause(1000)
                     this.clear()
                     this.display(color);
                 }
