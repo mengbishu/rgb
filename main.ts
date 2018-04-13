@@ -181,7 +181,7 @@ namespace pixel {
             basic.pause(100);
 
             if (this.len > 1) {
-                while (k++ < (this.len - 1)) {
+                while (k++ < (this.len)) {
                     for (i = 0; i < 8; i++) {
                         // this.clear();
                         serial.writeLine("");
@@ -198,14 +198,6 @@ namespace pixel {
                 }
             }
         }
-
-        // screen[i] = (screen[i] << 1) | (queue[(k / 8)+i] & (0x1 << 7 - i) >> (7 - i));
-        //                 serial.writeNumber(11); 
-        // (screen[j] << i) |
-        // >> (7-i)    
-        // basic.pause(500)
-        //             this.clear()
-        //             this.display(color);
 
         //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
         //% x.min=0 x.max=8
