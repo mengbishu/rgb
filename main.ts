@@ -24,7 +24,7 @@ enum NeoPixelColors {
     Black = 0x000000
 }
 
-enum Icons { 
+enum pic { 
     smile = 0,
     eagleEye,
     embarrassed,
@@ -286,7 +286,7 @@ namespace pixel {
             let i = 0;
             let j = 0;
             switch (i) {
-                case Icons.smile:
+                case pic.smile:
                     for (j = 0; j < 8; j++) {
                         screen[i] = _smile[i];
                     }
