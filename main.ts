@@ -291,7 +291,7 @@ namespace pixel {
             switch (i) {
                 case Pic.smile:
                     for (j = 0; j < 8; j++) {
-                        screen[i] = _smile[i];
+                        screen[j] = _smile[j];
                     }
                     
                     this.display(_smile[8]);
