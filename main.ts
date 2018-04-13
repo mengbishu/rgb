@@ -25,49 +25,8 @@ enum NeoPixelColors {
 }
 
 enum Pic { 
-    smile = 0,
-    eagleEye,
-    embarrassed,
-    sad,
-    scaleEys,
-    dumbfounded,
-    distress,
-    spades,
-    square,
-    glance,
-    blink ,
-    anger,
-    crossEyed,
-    terrorist,
-    dinosaurEgg,
-    whale,
-    grizzlies,
-    butterfly,
-    dog,
-    owl,
-    rocket,
-    comma,
-    exclamation,
-    lifting,
-    peach,
-    doubt,
-    left,
-    right,
-    down,
-    up,
-    true,
-    key,
-    hanger,
-    tv,
-    sailing,
-    squirrel,
-    et,
-    alien,
-    mushroom,
-    longEars,
-    surprised,
-    home,
-    false
+    smile = 0
+
 }
 
 let _smile: number[] = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00,0xFF00FF];
