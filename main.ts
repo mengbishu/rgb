@@ -181,7 +181,7 @@ namespace pixel {
             basic.pause(100);
 
             if (this.len > 1) {
-                while (k <= (this.len+1)) {
+                while (k <= (this.len)) {
                     k++;
                     for (i = 0; i < 8; i++) {
                         // this.clear();
@@ -237,6 +237,9 @@ namespace pixel {
                 for (k = 0; k < 8; k++) {
                     queue[sub++] = chr[index * 8 + k];
                 }
+            }
+            for (i = 0; i < 8; i++){
+                queue[sub++] = 0;
             }
             this.setChar(color);
         }
