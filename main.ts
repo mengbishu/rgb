@@ -24,7 +24,51 @@ enum NeoPixelColors {
     Black = 0x000000
 }
 
-
+enum Pic { 
+    smile = 0,
+    eagleEye,
+    embarrassed,
+    sad,
+    scaleEys,
+    dumbfounded,
+    distress,
+    spades,
+    square,
+    glance,
+    blink ,
+    anger,
+    crossEyed,
+    terrorist,
+    dinosaurEgg,
+    whale,
+    grizzlies,
+    butterfly,
+    dog,
+    owl,
+    rocket,
+    comma,
+    exclamation,
+    lifting,
+    peach,
+    doubt,
+    left,
+    right,
+    down,
+    up,
+    true,
+    key,
+    hanger,
+    tv,
+    sailing,
+    squirrel,
+    et,
+    alien,
+    mushroom,
+    longEars,
+    surprised,
+    home,
+    false
+}
 
 /**
  * Different modes for RGB or RGB+W NeoPixel strips
