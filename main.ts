@@ -193,7 +193,7 @@ namespace pixel {
                         
                         this.update();
                         this.display(color);
-                        basic.pause(100);
+                        basic.pause(50);
                     }
                 }
             }
