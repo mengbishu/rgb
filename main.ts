@@ -372,20 +372,20 @@ namespace pixel {
             this.setChar(color);
         }
 
-        //% blockId="showDir" block="%strip/ show dir %dir| color %color"
-        showDir(dir: Direction,color:NeoPixelColors): void{
-            let i=0;
-            let j=0;
-            let index=0;            
-            index = dir*8; 
-            for (i = 0; i < 8; i++) {
-                for (j = 0; j < 8; j++) {
-                    if (((dirs[index+i] >> j) & 0x1) == 1) {
-                        this.setPixel(j, 7-i, color)
-                    }
-                }
-            }   
-        }
+       // // % blockId="showDir" block="%strip/ show dir %dir| color %color"
+        // showDir(dir: Direction,color:NeoPixelColors): void{
+        //     let i=0;
+        //     let j=0;
+        //     let index=0;            
+        //     index = dir*8; 
+        //     for (i = 0; i < 8; i++) {
+        //         for (j = 0; j < 8; j++) {
+        //             if (((dirs[index+i] >> j) & 0x1) == 1) {
+        //                 this.setPixel(j, 7-i, color)
+        //             }
+        //         }
+        //     }   
+        // }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
         //% weight=85 blockGap=8
