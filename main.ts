@@ -298,6 +298,7 @@ namespace pixel {
                     for (j = 0; j < 8; i++){
                         serial.writeNumber(screen[j]);
                     }
+                    serial.writeNumber(99999);
                     break;
             }
                 
