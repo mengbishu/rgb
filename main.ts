@@ -287,6 +287,7 @@ namespace pixel {
         showIconsss(): void{
             let i = 0;
             let j = 0;
+            screen = [0];
             switch (i) {
                 case Pic.smile:
                     for (j = 0; j < 8; j++) {
