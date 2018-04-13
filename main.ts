@@ -181,7 +181,7 @@ namespace pixel {
             basic.pause(100);
 
             if (this.len > 1) {
-                while (k <= (this.len)) {
+                while (k <= (this.len+1)) {
                     k++;
                     for (i = 0; i < 8; i++) {
                         // this.clear();
