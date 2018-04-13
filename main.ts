@@ -201,7 +201,13 @@ namespace pixel {
             }
         }
  
-        showIconsss(index:number): void{
+            //% weight=50 blockGap=8
+            //% help=images/icon-image
+            //% blockId=builtin_image block="icon image %index"
+            //% i.fieldEditor="gridpicker"
+            //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
+            //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+        showIconsss(index:Pic): void{
             screen = [0];
             switch (index) {
                 case Pic.smile:
