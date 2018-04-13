@@ -191,7 +191,7 @@ namespace pixel {
                             serial.writeLine("");
                         }
                         
-                        this.clear();
+                        this.update();
                         this.display(color);
                         basic.pause(100);
                     }
@@ -290,6 +290,11 @@ namespace pixel {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
             this.show();
+        }
+
+        update(): void {
+            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            this.buf.fill(0, this.start * stride, this._length * stride);
         }
 
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
