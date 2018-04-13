@@ -180,7 +180,7 @@ namespace pixel {
             this.display(color);
             basic.pause(100);
 
-            if (this.len > 1) {
+            if (this.len > 2) {
                 while (k++ < (this.len+1)) {
                     
                     for (i = 0; i < 8; i++) {
@@ -224,7 +224,7 @@ namespace pixel {
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: NeoPixelColors): void{
             let l = str.length;
-            this.len = l;
+            this.len = l+1;
             let i = 0;
             let index=0;
             let j = 0;
@@ -244,6 +244,7 @@ namespace pixel {
             for (i = 0; i < 8; i++){
                 queue[sub++] = 0;
             }
+            serial.writeNumber(this.len);
             this.setChar(color);
         }
 
