@@ -293,8 +293,11 @@ namespace pixel {
                     for (j = 0; j < 8; j++) {
                         screen[i] = _smile[i];
                     }
-                    serial.writeNumber(1);
+                    
                     this.display(_smile[8]);
+                    for (j = 0; j < 8; i++){
+                        serial.writeNumber(screen[j]);
+                    }
                     break;
             }
                 
