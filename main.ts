@@ -182,7 +182,7 @@ namespace pixel {
 
             if (this.len > 1) {
                 this.clear();
-                while (k++ < this.len) {
+                while (k++ < (this.len-1)) {
                     for (i = 0; i < 8; i++) {
                         serial.writeLine("");
                         for (j = 0; j < 8; j++){
