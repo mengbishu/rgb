@@ -189,6 +189,8 @@ namespace pixel {
                             screen[j] = (screen[j] << i) | ((queue[k * 8 + j] & (0x1 << i)) >> i);
                             serial.writeNumber(queue[k * 8 + j]);
                         }
+                        this.clear();
+                    this.display(color);
                     }
                 }
             }
