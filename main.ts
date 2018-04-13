@@ -194,11 +194,8 @@ namespace pixel {
                         this.update();
                         this.display(color);
                         basic.pause(10);
-                        serial.writeLine("");
-                        serial.writeNumber(queue[k]);
-                        serial.writeLine("");
                     }
-
+                    this.clear()
                 }
             }
         }
