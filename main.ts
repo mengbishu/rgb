@@ -25,6 +25,7 @@ enum NeoPixelColors {
 }
 
 enum Pic { 
+    //% block = Smile
     smile = 0,
     eagleEye,
     embarrassed,
