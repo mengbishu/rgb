@@ -264,6 +264,7 @@ namespace Matrix {
         }
  
         //% blockId="showIcons" block="%strip| display Icon %index"
+        //% showIcons.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
