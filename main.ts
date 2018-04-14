@@ -263,8 +263,9 @@ namespace Matrix {
             }
         }
  
+        //% blockGap=50
         //% blockId="showIcons" block="%strip| display Icon %index"
-        //% button.fieldEditor="gridpicker" index.fieldOptions.columns=3
+        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
