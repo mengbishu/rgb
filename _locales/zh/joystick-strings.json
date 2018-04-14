@@ -60,6 +60,6 @@
   "Direction.northwest|block" : "西北",
   "Direction.north|block" : "北",
   "Direction.northeast|block" : "东北",
-  "pixel.Strip.showIcons|block" : "显示图片%index",
+  "pixel.Strip.showIcons|block" : "显示图片%index"
   
 }
