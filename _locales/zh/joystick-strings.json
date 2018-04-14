@@ -27,6 +27,6 @@
   "pixel.Strip.setBrightness|block" : "%strip|设置亮度 %brightness",
   "pixel.rgb|block" : "红色 %red|绿色 %green|蓝色 %blue",
   "pixel.colors|block" : "颜色 %color",
-  "pixel.create|block" : "创建NeoPixel",
+  "pixel.create|block" : "创建NeoPixel"
   
 }
