@@ -72,7 +72,7 @@ enum Pic {
 
 
 
-enum Direction{
+enum _Dir{
     east = 0,
     southeast = 1,
     south = 2,
@@ -514,7 +514,7 @@ namespace pixel {
         }
 
         // % blockId="showDir" block="aaa %strip| show dir %dir| color %color"
-        showDir(dir: Direction,color:NeoPixelColors): void{
+        showDir(dir: _Dir,color:NeoPixelColors): void{
             let i=0;
             let j=0;
             let index=0;            
