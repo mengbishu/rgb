@@ -474,7 +474,7 @@ namespace pixel {
 
 
        
-        //% blockId="clearPixel" block="%strip| clear pixel %x| %y"
+        //% blockId="clearPixel" block="%strip| clear pixel x %x| y %y"
         clearPixel(x: number, y: number): void{
             this.setPixel(x, y, NeoPixelColors.Black);
         }
@@ -528,10 +528,10 @@ namespace pixel {
             }
         }
 
-        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
+        //% blockId="neopixel_set_strip_color" block="%strip|fill color %rgb" 
         //% weight=85 blockGap=8
         //% parts="neopixel"
-        showColor(rgb: number) {
+        showColor(rgb: NeoPixelColors) {
             this.setAllRGB(rgb);
             this.show();
         }
@@ -544,7 +544,7 @@ namespace pixel {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
 
-        //% blockId="neopixel_clear" block="%strip|clear"
+        //% blockId="clear" block="%strip|clear"
         //% weight=76
         //% parts="neopixel"
         clear(): void {
@@ -557,7 +557,7 @@ namespace pixel {
             this.buf.fill(0, this.start * stride, this._length * stride);
         }
 
-        //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
+        //% blockId="setBrightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" 
         setBrightness(brightness: number): void {
