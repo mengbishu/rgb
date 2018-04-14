@@ -264,7 +264,7 @@ namespace Matrix {
         }
  
         //% blockId="showIcons" block="%strip| display Icon %index"
-        //% index.fieldOptions.columns=3
+        //% button.fieldEditor="gridpicker" index.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
