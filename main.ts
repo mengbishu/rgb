@@ -530,8 +530,6 @@ namespace Matrix {
                 }
             }
         }
-
-
        
         //% blockId="clearPixel" block="%strip| clear pixel x %x| y %y"
         clearPixel(x: number, y: number): void{
