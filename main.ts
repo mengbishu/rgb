@@ -178,7 +178,7 @@ namespace pixel {
         brightness: number;
         start: number; // start offset in LED strip
         _length: number; // number of LEDs
-        _mode: NeoPixelMode;
+        _mode: number;
         _matrixWidth: number; // number of leds in a matrix - if any
         len: number;
 
@@ -557,7 +557,7 @@ namespace pixel {
         }
 
         update(): void {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === 1 ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
         }
 
@@ -575,7 +575,7 @@ namespace pixel {
         }
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
-            if (this._mode === NeoPixelMode.RGB_RGB) {
+            if (this._mode === 2) {
                 this.buf[offset + 0] = red;
                 this.buf[offset + 1] = green;
             } else {
@@ -597,7 +597,7 @@ namespace pixel {
                 blue = (blue * br) >> 8;
             }
             const end = this.start + this._length;
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const stride = this._mode === 1 ? 4 : 3;
             for (let i = this.start; i < end; ++i) {
                 this.setBufferRGB(i * stride, red, green, blue)
             }
@@ -608,7 +608,7 @@ namespace pixel {
                 || pixeloffset >= this._length)
                 return;
 
-            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            let stride = this._mode === 1 ? 4 : 3;
             pixeloffset = (pixeloffset + this.start) * stride;
 
             let red = unpackR(rgb);
@@ -633,7 +633,7 @@ namespace pixel {
         let strip = new Strip();
         let mode = 0;
         let numleds = 64; 
-        let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
+        let stride = mode === 1 ? 4 : 3;
         strip.buf = pins.createBuffer(numleds * stride);
         strip.start = 0;
         strip._length = numleds;
