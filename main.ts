@@ -512,7 +512,7 @@ namespace pixel {
         }
 
         //% blockId="a" block="%strip| aaa display string %str| color %color"
-        a(str: string, color: NeoPixelColors): void{
+        a(str: number, color: NeoPixelColors): void{
             this.setPixel(2, 3, 0xaaaaaa);
             // let i=0;
             // let j=0;
