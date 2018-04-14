@@ -37,17 +37,29 @@ enum Pic {
     scaleEys = 4,
     //% block=dumbfounded
     dumbfounded = 5,
+    //% block=distress
     distress,
+    //% block=spades
     spades,
+    //% block=square
     square,
+    //% block=glance
     glance,
+    //% block=blink
     blink ,
+    //% block=anger
     anger,
+    //% block=crossEyed
     crossEyed,
+    //% block=terrorist
     terrorist,
+    //% block=dinosaurEgg
     dinosaurEgg,
+    //% block=whale
     whale,
+    //% block=grizzlies
     grizzlies,
+    //% block=butterfly
     butterfly,
     dog,
     owl,
