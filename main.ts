@@ -479,7 +479,7 @@ namespace pixel {
                         }                       
                         this.update();
                         this.display(color);
-                        basic.pause(50);
+                        basic.pause(100);
                     }
                     this.clear()
                 }
@@ -538,7 +538,7 @@ namespace pixel {
             for (i = 0; i < 8; i++) {
                 for (j = 0; j < 8; j++) {
                     if (((dirs[index+i] >> j) & 0x1) == 1) {
-                        this.setPixel(j, 7-i, color);
+                        this.setPixel(j, i, color);
                     }
                 }
             }
