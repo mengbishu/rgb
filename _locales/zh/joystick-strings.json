@@ -9,6 +9,6 @@
   "NeoPixelColors.Purple|block" : "粉",
   "NeoPixelColors.White|block" : "白",
   "NeoPixelColors.Black|block" : "黑",
-  "pixel.Strip.showIcons|block" : "显示图片%index"
+  "pixel.Strip.showIcons|block" : "%strip|显示图片%index"
   
 }
