@@ -513,7 +513,7 @@ namespace pixel {
             this.setChar(color);
         }
 
-        // % blockId="showDir" block="%strip/ show dir %dir| color %color"
+        // % blockId="showDir" block="%strip| show dir %dir| color %color"
         showDir(dir: Direction,color:NeoPixelColors): void{
             let i=0;
             let j=0;
