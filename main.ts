@@ -72,27 +72,16 @@ enum Pic {
 }
 
 
-        // //% block=violet
-        // Violet = 0x8a2be2,
-        // //% block=purple
-        // Purple = 0xFF00FF,
-        // //% block=white
-        // White = 0xFFFFFF,
-        // //% block=black
-        // Black = 0x000000
+
 enum _Dir{
-
     east = 0,
-
     southeast = 1,
-
     south = 2,
-
-    southwest = 3
-    // west = 4,
-    // northwest  = 5,
-    // north = 6,
-    // northeast = 7
+    southwest = 3,
+    west = 4,
+    northwest  = 5,
+    north = 6,
+    northeast = 7
     }
     
 
