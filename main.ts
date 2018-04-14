@@ -81,14 +81,14 @@ enum Pic {
         // //% block=black
         // Black = 0x000000
 enum _Dir{
-    //% block=east
+
     east = 0,
-    //% block=southeast
+
     southeast = 1,
-    //% block=south
+
     south = 2,
-    //% block=southwest
-    southwest = 3,
+
+    southwest = 3
     // west = 4,
     // northwest  = 5,
     // north = 6,
