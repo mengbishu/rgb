@@ -61,31 +61,57 @@ enum Pic {
     grizzlies,
     //% block=butterfly
     butterfly,
+    //% block=dog
     dog,
+    //% block=owl
     owl,
+    //% block=rocket
     rocket,
+    //% block=comma
     comma,
+    //% block=exclamation
     exclamation,
+    //% block=lifting
     lifting,
+    //% block=peach
     peach,
+    //% block=doubt
     doubt,
+    //% block=left
     left,
+    //% block=left
     right,
+    //% block=down
     down,
+    //% block=up
     up,
+    //% block=true
     true,
+    //% block=key
     key,
+    //% block=hanger
     hanger,
+    //% block=tv
     tv,
+    //% block=sailing
     sailing,
+    //% block=squirrel
     squirrel,
+    //% block=et
     et,
+    //% block=alien
     alien,
+    //% block=mushroom
     mushroom,
+    //% block=longEars
     longEars,
+    //% block=surprised
     surprised,
+    //% block=home
     home,
+    //% block=false
     false
+    
 }
 
 
