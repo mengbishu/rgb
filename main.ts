@@ -28,15 +28,15 @@ enum Pic {
     //% block=smile
     smile = 0,
     //% block=eagleEye
-    eagleEye,
+    eagleEye = 1,
     //% block=embarrassed
-    embarrassed,
+    embarrassed = 2,
     //% block=sad
-    sad,
+    sad = 3,
     //% block=scaleEys
-    scaleEys,
+    scaleEys = 4,
     //% block=dumbfounded
-    dumbfounded
+    dumbfounded = 5
     // distress,
     // spades,
     // square,
