@@ -577,6 +577,7 @@ namespace pixel {
         //% blockId="setBrightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" 
+        //% brightness.min=0 brightness.max=255
         setBrightness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
