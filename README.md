@@ -1,4 +1,4 @@
-# joystick
+# matrix
 
 Micro:bit joystick expansion board.
 ---------------------------------------------------------
