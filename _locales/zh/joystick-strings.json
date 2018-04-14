@@ -17,6 +17,7 @@
   "_Dir.northwest|block" : "西北",
   "_Dir.north|block" : "北",
   "_Dir.northeast|block" : "东北",
+  "Pic.smile|block" : "微笑",
   "pixel.Strip.showIcons|block" : "%strip|显示图片%index",
   "pixel.Strip.setPixel|block" : "%strip|显示像素点x %x| y %y| 颜色 %color",
   "pixel.Strip.clearPixel|block" : "%strip|清除像素点 x %x| y %y",
