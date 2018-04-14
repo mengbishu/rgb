@@ -81,7 +81,7 @@ enum _Dir{
     west = 4,
     northwest  = 5,
     north = 6,
-    northeast = 7
+    northeast = 7,
     }
     
 
