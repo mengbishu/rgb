@@ -563,12 +563,6 @@ namespace pixel {
             this.brightness = brightness & 0xff;
         }
 
-        setPin(pin: DigitalPin): void {
-            this.pin = pin;
-            pins.digitalWritePin(this.pin, 0);
-            // don't yield to avoid races on initialization
-        }
-
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
             if (this._mode === 2) {
                 this.buf[offset + 0] = red;
@@ -633,7 +627,7 @@ namespace pixel {
         strip._mode = mode;
         strip._matrixWidth = 0;
         strip.setBrightness(255)
-        strip.setPin(DigitalPin.P12)
+        pins.digitalWritePin(DigitalPin.P12, 0);
         return strip;
     }
 
