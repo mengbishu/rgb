@@ -25,7 +25,7 @@ enum NeoPixelColors {
 }
 
 enum Pic {
-    smile = 0,
+    Smile = 0,
     eagleEye,
     embarrassed,
     sad,
