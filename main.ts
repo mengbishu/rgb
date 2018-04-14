@@ -629,7 +629,7 @@ namespace pixel {
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
-    export function create(pin: DigitalPin,): Strip {
+    export function create(pin: DigitalPin): Strip {
         let strip = new Strip();
         let mode = 0;
         let numleds = 64; 
