@@ -25,6 +25,7 @@
   "pixel.Strip.showCompass|block" : "%strip|显示方向 %dir| 颜色 %color",
   "pixel.Strip.showColor|block" : "%strip|全屏显示颜色 %rgb",
   "pixel.Strip.setBrightness|block" : "%strip|设置亮度 %brightness",
+  "pixel.Strip.clear|block" : "%strip|清空屏幕",
   "pixel.rgb|block" : "红色 %red|绿色 %green|蓝色 %blue",
   "pixel.colors|block" : "颜色 %color",
   "pixel.create|block" : "创建NeoPixel"
