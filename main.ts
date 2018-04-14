@@ -70,17 +70,7 @@ enum Pic {
     false
 }
 
-/**
- * Different modes for RGB or RGB+W NeoPixel strips
- */
-enum NeoPixelMode {
-    //% block="RGB (GRB format)"
-    RGB = 0,
-    //% block="RGB+W"
-    RGBW = 1,
-    //% block="RGB (RGB format)"
-    RGB_RGB = 2
-}
+
 
 enum Direction{
     east = 0,
@@ -168,6 +158,16 @@ namespace pixel {
         0x00, 0x00, 0xE7, 0x66, 0x3C, 0x18, 0x10, 0xE0,
         0x00, 0x00, 0x7E, 0x44, 0x18, 0x32, 0x7E, 0x00];
     
+    let dirs:number[] = [
+        0x00,0x00,0x04,0x7E,0x04,0x00,0x00,0x00, //->
+        0x00,0x40,0x20,0x10,0x0A,0x06,0x0E,0x00,
+        0x00,0x10,0x10,0x10,0x10,0x38,0x10,0x00, //|
+        0x00,0x02,0x04,0x08,0x50,0x60,0x70,0x00,
+        0x00,0x00,0x20,0x7E,0x20,0x00,0x00,0x00, //<-
+        0x00,0x70,0x60,0x50,0x08,0x04,0x02,0x00,
+        0x00,0x10,0x38,0x10,0x10,0x10,0x10,0x00, //^
+        0x00,0x0E,0x06,0x0A,0x10,0x20,0x40,0x00]
+    
     let queue: number[] = [0];
     let screen: number[] = [0];
     
@@ -201,15 +201,8 @@ namespace pixel {
             }
         }
  
-        //% weight=90 blockGap=8
-        //% blockId=showIconsss
-        //% block="show icon %i" icon="\uf00a"
-        //% parts="ledmatrix"
-        //% help=basic/show-icon
-        //% i.fieldEditor="gridpicker"
-        //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
-        //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-        showIconsss(index:Pic): void{
+        //% blockId="showIcons" block="%strip| display Icon %index"
+        showIcons(index:Pic): void{
             screen = [0];
             switch (index) {
                 case Pic.smile:
@@ -520,20 +513,20 @@ namespace pixel {
             this.setChar(color);
         }
 
-       // // % blockId="showDir" block="%strip/ show dir %dir| color %color"
-        // showDir(dir: Direction,color:NeoPixelColors): void{
-        //     let i=0;
-        //     let j=0;
-        //     let index=0;            
-        //     index = dir*8; 
-        //     for (i = 0; i < 8; i++) {
-        //         for (j = 0; j < 8; j++) {
-        //             if (((dirs[index+i] >> j) & 0x1) == 1) {
-        //                 this.setPixel(j, 7-i, color)
-        //             }
-        //         }
-        //     }   
-        // }
+        // % blockId="showDir" block="%strip/ show dir %dir| color %color"
+        showDir(dir: Direction,color:NeoPixelColors): void{
+            let i=0;
+            let j=0;
+            let index=0;            
+            index = dir*8; 
+            for (i = 0; i < 8; i++) {
+                for (j = 0; j < 8; j++) {
+                    if (((dirs[index+i] >> j) & 0x1) == 1) {
+                        this.setPixel(j, 7-i, color);
+                    }
+                }
+            }
+        }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
         //% weight=85 blockGap=8
@@ -575,8 +568,6 @@ namespace pixel {
             this.brightness = brightness & 0xff;
         }
 
-        //% weight=10
-        //% parts="neopixel" 
         setPin(pin: DigitalPin): void {
             this.pin = pin;
             pins.digitalWritePin(this.pin, 0);
@@ -634,12 +625,14 @@ namespace pixel {
         }
     }
 
-    //% blockId="neopixel_create" block="NeoPixel at pin %pin|with %numleds|leds as %mode"
+    //% blockId="neopixel_create" block="NeoPixel at pin %pin"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
-    export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): Strip {
+    export function create(pin: DigitalPin,): Strip {
         let strip = new Strip();
+        let mode = 0;
+        let numleds = 64; 
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
         strip.buf = pins.createBuffer(numleds * stride);
         strip.start = 0;
