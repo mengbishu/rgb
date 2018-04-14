@@ -514,18 +514,19 @@ namespace pixel {
         }
 
         // % blockId="showDir" block="aaa %strip| show dir %dir| color %color"
-        showDir(dir: _Dir,color:NeoPixelColors): void{
-            let i=0;
-            let j=0;
-            let index=0;            
-            index = dir*8; 
-            for (i = 0; i < 8; i++) {
-                for (j = 0; j < 8; j++) {
-                    if (((dirs[index+i] >> j) & 0x1) == 1) {
-                        this.setPixel(j, 7-i, color);
-                    }
-                }
-            }
+        showDir(dir: _Dir, color: NeoPixelColors): void{
+            this.showPixel(2,3,0xaaaaaa)
+            // let i=0;
+            // let j=0;
+            // let index=0;            
+            // index = dir*8; 
+            // for (i = 0; i < 8; i++) {
+            //     for (j = 0; j < 8; j++) {
+            //         if (((dirs[index+i] >> j) & 0x1) == 1) {
+            //             this.setPixel(j, 7-i, color);
+            //         }
+            //     }
+            // }
         }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
@@ -536,10 +537,6 @@ namespace pixel {
             this.show();
         }
 
-        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors" 
-        //% blockGap=8
-        //% weight=80
-        //% parts="neopixel" 
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset, rgb);
         }
@@ -629,7 +626,7 @@ namespace pixel {
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
-    export function create(pin: DigitalPin): Strip {
+    export function create(): Strip {
         let strip = new Strip();
         let mode = 0;
         let numleds = 64; 
@@ -640,7 +637,7 @@ namespace pixel {
         strip._mode = mode;
         strip._matrixWidth = 0;
         strip.setBrightness(255)
-        strip.setPin(pin)
+        strip.setPin(DigitalPin.P12)
         return strip;
     }
 
