@@ -511,8 +511,8 @@ namespace pixel {
             this.setChar(color);
         }
 
-        // % blockId="showDir" block="%strip| show dir %dir| color %color"
-        showDir(dir: _Dir, color: NeoPixelColors): void{
+        //% blockId="a" block="%strip| aaa display string %str| color %color"
+        a(str: string, color: NeoPixelColors): void{
             this.setPixel(2, 3, 0xaaaaaa);
             // let i=0;
             // let j=0;
