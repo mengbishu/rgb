@@ -9,6 +9,14 @@
   "NeoPixelColors.Purple|block" : "粉",
   "NeoPixelColors.White|block" : "白",
   "NeoPixelColors.Black|block" : "黑",
+  "_Dir.east|block" : "东",
+  "_Dir.southeast|block" : "东南",
+  "_Dir.south|block" : "南",
+  "_Dir.southwest|block" : "西南",
+  "_Dir.west|block" : "西",
+  "_Dir.northwest|block" : "西北",
+  "_Dir.north|block" : "北",
+  "_Dir.northeast|block" : "东北",
   "pixel.Strip.showIcons|block" : "%strip|显示图片%index",
   "pixel.Strip.setPixel|block" : "%strip|显示像素点x %x| y %y| 颜色 %color",
   "pixel.Strip.clearPixel|block" : "%strip|清除像素点 x %x| y %y",
@@ -17,6 +25,8 @@
   "pixel.Strip.showCompass|block" : "%strip|显示方向 %dir| 颜色 %color",
   "pixel.Strip.showColor|block" : "%strip|全屏显示颜色 %rgb",
   "pixel.Strip.setBrightness|block" : "%strip|设置亮度 %brightness",
-  "pixel.rgb|block" : "红色 %red|green %green|blue %blue",
-  "pixel.colors|block" : "颜色 %color"
+  "pixel.rgb|block" : "红色 %red|绿色 %green|蓝色 %blue",
+  "pixel.colors|block" : "颜色 %color",
+  "pixel.create|block" : "创建NeoPixel",
+  
 }
