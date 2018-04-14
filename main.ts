@@ -516,7 +516,8 @@ namespace pixel {
             let i=0;
             let j=0;
             let index=0;            
-            index = dir*8; 
+            index = dir * 8; 
+            this.update();
             for (i = 0; i < 8; i++) {
                 for (j = 0; j < 8; j++) {
                     if (((dirs[index+i] >> j) & 0x1) == 1) {
