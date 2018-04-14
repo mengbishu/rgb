@@ -76,12 +76,19 @@ enum Pic {
 enum _Dir{
     //% block=east
     east = 0,
+    //% block=southeast
     southeast = 1,
+    //% block=south
     south = 2,
+    //% block=southwest
     southwest = 3,
+    //% block=west
     west = 4,
-    northwest  = 5,
+    //% block=northwest
+    northwest = 5,
+    //% block=north
     north = 6,
+    //% block=northeast
     northeast = 7
     }
     
