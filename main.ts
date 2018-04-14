@@ -182,9 +182,6 @@ namespace pixel {
         _matrixWidth: number; // number of leds in a matrix - if any
         len: number;
 
-        //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
-        //% x.min=0 x.max=8
-        //% y.min=0 y.max=8
         setPixel(x: number, y: number, color: number): void { 
             let offset = y*8+x
             this.setPixelColor(offset, color)
@@ -471,8 +468,13 @@ namespace pixel {
             }
         }
 
-
-       
+        //% blockId="showPixel" block="%strip| display pixel %x| %y| color %color"
+        //% x.min=0 x.max=8
+        //% y.min=0 y.max=8
+        showPixel(x: number, y: number, color: number): void{
+            this.setPixel(x, y, color);
+        }
+        
         //% blockId="clearPixel" block="%strip| clear pixel %x| %y"
         clearPixel(x: number, y: number): void{
             this.setPixel(x, y, NeoPixelColors.Black);
@@ -511,20 +513,19 @@ namespace pixel {
             this.setChar(color);
         }
 
-
-        showDir(dir: _Dir, color: NeoPixelColors): void{
-            this.setPixel(2, 3, 0xaaaaaa);
-            // let i=0;
-            // let j=0;
-            // let index=0;            
-            // index = dir*8; 
-            // for (i = 0; i < 8; i++) {
-            //     for (j = 0; j < 8; j++) {
-            //         if (((dirs[index+i] >> j) & 0x1) == 1) {
-            //             this.setPixel(j, 7-i, color);
-            //         }
-            //     }
-            // }
+        // % blockId="showDir" block="aaa %strip| show dir %dir| color %color"
+        showDir(dir: _Dir,color:NeoPixelColors): void{
+            let i=0;
+            let j=0;
+            let index=0;            
+            index = dir*8; 
+            for (i = 0; i < 8; i++) {
+                for (j = 0; j < 8; j++) {
+                    if (((dirs[index+i] >> j) & 0x1) == 1) {
+                        this.setPixel(j, 7-i, color);
+                    }
+                }
+            }
         }
 
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
