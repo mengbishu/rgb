@@ -1,3 +1,6 @@
+/**
+ * Well known colors for a NeoPixel strip
+ */
 enum NeoPixelColors {
     //% block=red
     Red = 0xFF0000,
@@ -263,9 +266,7 @@ namespace Matrix {
             }
         }
  
-        //% blockGap=50
         //% blockId="showIcons" block="%strip| display Icon %index"
-        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
@@ -532,6 +533,8 @@ namespace Matrix {
                 }
             }
         }
+
+
        
         //% blockId="clearPixel" block="%strip| clear pixel x %x| y %y"
         clearPixel(x: number, y: number): void{
