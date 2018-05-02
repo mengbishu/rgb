@@ -745,7 +745,7 @@ namespace Matrix {
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
     export function myicon(i: Pic) {
-       
+        let a = 1;
     }
 
     //% weight=90 blockGap=8
