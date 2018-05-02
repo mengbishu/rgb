@@ -780,7 +780,7 @@ namespace Matrix {
         return image;
     }
 
-        //% weight=90 blockGap=8
+    //% weight=90 blockGap=8
     //% blockId=basic_show_iconn
     //% block="show iconn %i" icon="\uf00a"
     //% parts="ledmatrix"
