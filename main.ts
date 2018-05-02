@@ -27,7 +27,7 @@ enum Pic {
     //% block=eagleEye
     eagleEye = 1,
     //% block=embarrassed
-    embarrassed = 2,
+    embarrassed = 2
     // //% block=sad
     // sad = 3,
     // //% block=scaleEys
