@@ -277,16 +277,12 @@ namespace Matrix {
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
-            let res = myicon(index);
-            res.showImage(0, 600);
             switch (index) {
                 case Pic.smile:
-                    
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
                 case Pic.eagleEye:
-                
                     screen = [0x81, 0xC3, 0xA5, 0xFF, 0x00, 0x00, 0x00, 0x00];
                     this.display(0xFFFF00)
                     screen = [0x00, 0x00, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00];
@@ -295,7 +291,6 @@ namespace Matrix {
                     this.display(0x8a2be2);
                     break;                    
                 case Pic.embarrassed:
-     
                     screen = [0x24, 0x24, 0x24, 0x42, 0x81, 0x00, 0x00, 0x00];
                     this.display(0x8a2be2);
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x42];
