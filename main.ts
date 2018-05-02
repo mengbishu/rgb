@@ -741,9 +741,7 @@ namespace Matrix {
     //% weight=50 blockGap=8
     //% help=images/icon-image
     //% blockId=builtin_image block="icon image %i"
-    //% i.fieldEditor="gridpicker"
-    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
-    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+
     export function myicon(i: Pic): number {
         switch (i) {
             case Pic.smile: return 1; 
