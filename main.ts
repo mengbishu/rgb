@@ -740,11 +740,11 @@ namespace Matrix {
 
     //% weight=50 blockGap=8
     //% help=images/icon-image
-    //% blockId=builtin_image block="icon image %i"
+    //% blockId=builtin_images block="icon images %i"
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function myicon(i: IconNames): Image {
+    export function myicon(i: Pic): Image {
         let image = images.createImage(`
         . # . # .
         # # # # #
@@ -752,7 +752,7 @@ namespace Matrix {
         . # # # .
         . . # . .`);
         switch (i) {
-            case IconNames.Heart:
+            case Pic.smile:
                 image = images.createImage(`
                                         . # . # .
                                         # # # # #
@@ -761,7 +761,7 @@ namespace Matrix {
                                         . . # . .`);
                 break;
 
-            case IconNames.SmallHeart: image = images.createImage(`
+            case Pic.eagleEye: image = images.createImage(`
                                         . . . . .
                                         . # . # .
                                         . # # # .
@@ -769,7 +769,7 @@ namespace Matrix {
                                         . . . . .`);
                                         break;
             //faces
-            case IconNames.Happy: image = images.createImage(`
+            case Pic.embarrassed: image = images.createImage(`
                                         . . . . .
                                         . # . # .
                                         . . . . .
@@ -780,13 +780,15 @@ namespace Matrix {
         return image;
     }
 
-    //% weight=90 blockGap=8
-    //% blockId=basic_show_iconn
-    //% block="show iconn %i" icon="\uf00a"
+        //% weight=90 blockGap=8
+    //% blockId=basic_show_icon
+    //% block="show icon %i" icon="\uf00a"
+    //% parts="ledmatrix"
+    //% help=basic/show-icon
     //% i.fieldEditor="gridpicker"
-    //% parts="ledmatrix" i.fieldOptions.columns="5" 
-    //% i.fieldOptions.tooltips="true"
-    export function showIconn(icon: IconNames, interval = 600) {
+    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
+    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+    export function showIcon(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
     }
 }
