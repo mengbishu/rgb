@@ -23,10 +23,13 @@ enum NeoPixelColors {
 
 enum Pic {
     //% block=smile
+    //% blockImage=1
     smile = 0,
     //% block=eagleEye
+    //% blockImage=1
     eagleEye = 1,
     //% block=embarrassed
+    //% blockImage=1
     embarrassed = 2
     // //% block=sad
     // sad = 3,
