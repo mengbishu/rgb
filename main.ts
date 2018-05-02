@@ -272,8 +272,8 @@ namespace Matrix {
         //% parts="ledmatrix"
         //% help=basic/show-icon
         //% index.fieldEditor="gridpicker"
-        //% index.fieldOptions.width="400" i.fieldOptions.columns="5"
-        //% index.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+        //% index.fieldOptions.width="400" index.fieldOptions.columns="5"
+        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
