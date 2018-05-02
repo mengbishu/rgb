@@ -267,6 +267,7 @@ namespace Matrix {
         //% blockId="showIcons" block="%strip| display Icon %index"
         //% parts="ledmatrix"
         //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
+        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
@@ -277,7 +278,7 @@ namespace Matrix {
                 . # # # .
                 # . # . #
                 . . # . .
-                . . # . .`);   
+                . . # . .`);
                     res.showImage(0, 600);
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
