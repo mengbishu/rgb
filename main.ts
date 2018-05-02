@@ -789,7 +789,6 @@ namespace Matrix {
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
     export function showIconn(i: IconNames, interval = 600) {
-        let res = images.iconImage(i)
-        res.showImage(0, interval)
+        let a = 1;
     }
 }
