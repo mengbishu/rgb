@@ -744,7 +744,7 @@ namespace Matrix {
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function myicon(i: IconNames) {
+    export function myicon(i: Pic) {
        
     }
 
