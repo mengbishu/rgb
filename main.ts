@@ -744,7 +744,7 @@ namespace Matrix {
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function myicon(i: Pic): Image {
+    export function myicon(i: IconNames): Image {
         let image = images.createImage(`
         . # . # .
         # # # # #
@@ -752,7 +752,7 @@ namespace Matrix {
         . # # # .
         . . # . .`);
         switch (i) {
-            case Pic.smile:
+            case IconNames.Heart:
                 image = images.createImage(`
                                         . # . # .
                                         # # # # #
@@ -761,7 +761,7 @@ namespace Matrix {
                                         . . # . .`);
                 break;
 
-            case Pic.eagleEye: image = images.createImage(`
+            case IconNames.SmallHeart: image = images.createImage(`
                                         . . . . .
                                         . # . # .
                                         . # # # .
@@ -769,7 +769,7 @@ namespace Matrix {
                                         . . . . .`);
                                         break;
             //faces
-            case Pic.embarrassed: image = images.createImage(`
+            case IconNames.Happy: image = images.createImage(`
                                         . . . . .
                                         . # . # .
                                         . . . . .
@@ -788,7 +788,7 @@ namespace Matrix {
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function showIcon(icon: Pic, interval = 600) {
+    export function showIcon(icon: IconNames, interval = 600) {
         let res = myicon(icon)
         res.showImage(0, interval)
     }
