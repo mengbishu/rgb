@@ -263,39 +263,26 @@ namespace Matrix {
             }
         }
  
-
-
-
-        //% weight=90 blockGap=8
-        //% blockId=showIcons
-        //% block="%strip| display Icon %index" icon="\uf00a"
+        //% blockGap=50
+        //% blockId="showIcons" block="%strip| display Icon %index"
+        //% help=images/icon-image
         //% parts="ledmatrix"
-        //% help=basic/show-icon
-        //% index.fieldEditor="gridpicker"
-        //% index.fieldOptions.width="400" index.fieldOptions.columns="5"
+        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
         //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
+
+
+
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
             switch (index) {
                 case Pic.smile:
-                    let res = images.createImage(`    
-                    . # . # .
-                    # # # # #
-                    # # # # #
-                    . # # # .
-                    . . # . .`);
-                    res.showImage(0, 600);
+
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
                 case Pic.eagleEye:
-                images.createImage(`    
-                    . # . # .
-                    # # # # #
-                    # # # # #
-                    . # # # .
-                    . . # . .`);      
+     
                     screen = [0x81, 0xC3, 0xA5, 0xFF, 0x00, 0x00, 0x00, 0x00];
                     this.display(0xFFFF00)
                     screen = [0x00, 0x00, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00];
@@ -304,12 +291,7 @@ namespace Matrix {
                     this.display(0x8a2be2);
                     break;                    
                 case Pic.embarrassed:
-                images.createImage(`    
-                    . # . # .
-                    # # # # #
-                    # # # # #
-                    . # # # .
-                    . . # . .`);      
+     
                     screen = [0x24, 0x24, 0x24, 0x42, 0x81, 0x00, 0x00, 0x00];
                     this.display(0x8a2be2);
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x42];
