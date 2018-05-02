@@ -788,8 +788,8 @@ namespace Matrix {
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function showIconn(icon: IconNames, interval = 600) {
-        let res = images.iconImage(icon)
+    export function showIconn(i: IconNames, interval = 600) {
+        let res = images.iconImage(i)
         res.showImage(0, interval)
     }
 }
