@@ -263,12 +263,7 @@ namespace Matrix {
             }
         }
  
-        //% blockGap=50
-        //% blockId="showIcons" block="%strip| display Icon %index"
-        //% help=images/icon-image
-        //% parts="ledmatrix"
-        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
-        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
+
 
 
         //% weight=90 blockGap=8
