@@ -28,86 +28,86 @@ enum Pic {
     eagleEye = 1,
     //% block=embarrassed
     embarrassed = 2,
-    //% block=sad
-    sad = 3,
-    //% block=scaleEys
-    scaleEys = 4,
-    //% block=dumbfounded
-    dumbfounded = 5,
-    //% block=distress
-    distress,
-    //% block=spades
-    spades,
-    //% block=square
-    square,
-    //% block=glance
-    glance,
-    //% block=blink
-    blink ,
-    //% block=anger
-    anger,
-    //% block=crossEyed
-    crossEyed,
-    //% block=terrorist
-    terrorist,
-    //% block=dinosaurEgg
-    dinosaurEgg,
-    //% block=whale
-    whale,
-    //% block=grizzlies
-    grizzlies,
-    //% block=butterfly
-    butterfly,
-    //% block=dog
-    dog,
-    //% block=owl
-    owl,
-    //% block=rocket
-    rocket,
-    //% block=comma
-    comma,
-    //% block=exclamation
-    exclamation,
-    //% block=lifting
-    lifting,
-    //% block=peach
-    peach,
-    //% block=doubt
-    doubt,
-    //% block=left
-    left,
-    //% block=left
-    right,
-    //% block=down
-    down,
-    //% block=up
-    up,
-    //% block=true
-    true,
-    //% block=key
-    key,
-    //% block=hanger
-    hanger,
-    //% block=tv
-    tv,
-    //% block=sailing
-    sailing,
-    //% block=squirrel
-    squirrel,
-    //% block=et
-    et,
-    //% block=alien
-    alien,
-    //% block=mushroom
-    mushroom,
-    //% block=longEars
-    longEars,
-    //% block=surprised
-    surprised,
-    //% block=home
-    home,
-    //% block=false
-    false
+    // //% block=sad
+    // sad = 3,
+    // //% block=scaleEys
+    // scaleEys = 4,
+    // //% block=dumbfounded
+    // dumbfounded = 5,
+    // //% block=distress
+    // distress,
+    // //% block=spades
+    // spades,
+    // //% block=square
+    // square,
+    // //% block=glance
+    // glance,
+    // //% block=blink
+    // blink ,
+    // //% block=anger
+    // anger,
+    // //% block=crossEyed
+    // crossEyed,
+    // //% block=terrorist
+    // terrorist,
+    // //% block=dinosaurEgg
+    // dinosaurEgg,
+    // //% block=whale
+    // whale,
+    // //% block=grizzlies
+    // grizzlies,
+    // //% block=butterfly
+    // butterfly,
+    // //% block=dog
+    // dog,
+    // //% block=owl
+    // owl,
+    // //% block=rocket
+    // rocket,
+    // //% block=comma
+    // comma,
+    // //% block=exclamation
+    // exclamation,
+    // //% block=lifting
+    // lifting,
+    // //% block=peach
+    // peach,
+    // //% block=doubt
+    // doubt,
+    // //% block=left
+    // left,
+    // //% block=left
+    // right,
+    // //% block=down
+    // down,
+    // //% block=up
+    // up,
+    // //% block=true
+    // true,
+    // //% block=key
+    // key,
+    // //% block=hanger
+    // hanger,
+    // //% block=tv
+    // tv,
+    // //% block=sailing
+    // sailing,
+    // //% block=squirrel
+    // squirrel,
+    // //% block=et
+    // et,
+    // //% block=alien
+    // alien,
+    // //% block=mushroom
+    // mushroom,
+    // //% block=longEars
+    // longEars,
+    // //% block=surprised
+    // surprised,
+    // //% block=home
+    // home,
+    // //% block=false
+    // false
     
 }
 
