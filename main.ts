@@ -278,11 +278,11 @@ namespace Matrix {
             screen = [0];
             this.update();
             switch (index) {
-                case Pic.smile:
+                case Pic.Square:
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
-                case Pic.eagleEye:
+                case Pic.SmallSquare:
                     screen = [0x81, 0xC3, 0xA5, 0xFF, 0x00, 0x00, 0x00, 0x00];
                     this.display(0xFFFF00)
                     screen = [0x00, 0x00, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00];
@@ -290,7 +290,7 @@ namespace Matrix {
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7E, 0x3C];
                     this.display(0x8a2be2);
                     break;                    
-                case Pic.embarrassed:
+                case Pic.Scissors:
                     screen = [0x24, 0x24, 0x24, 0x42, 0x81, 0x00, 0x00, 0x00];
                     this.display(0x8a2be2);
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x42];
