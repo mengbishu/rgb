@@ -275,14 +275,16 @@ namespace Matrix {
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
+            let res = myicon(index);
+            res.showImage(0, 600);
             switch (index) {
                 case Pic.smile:
-
+                    
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
                 case Pic.eagleEye:
-     
+                
                     screen = [0x81, 0xC3, 0xA5, 0xFF, 0x00, 0x00, 0x00, 0x00];
                     this.display(0xFFFF00)
                     screen = [0x00, 0x00, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00];
@@ -737,5 +739,36 @@ namespace Matrix {
     function unpackB(rgb: number): number {
         let b = (rgb) & 0xFF;
         return b;
+    }
+
+    //% weight=50 blockGap=8
+    //% help=images/icon-image
+    //% blockId=builtin_image block="icon image %i"
+    //% i.fieldEditor="gridpicker"
+    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
+    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+    export function myicon(i: Pic): Image {
+        switch (i) {
+            case Pic.smile: return images.createImage(`
+                                        . # . # .
+                                        # # # # #
+                                        # # # # #
+                                        . # # # .
+                                        . . # . .`);
+
+            case Pic.eagleEye: return images.createImage(`
+                                        . . . . .
+                                        . # . # .
+                                        . # # # .
+                                        . . # . .
+                                        . . . . .`);
+            //faces
+            case Pic.embarrassed: return images.createImage(`
+                                        . . . . .
+                                        . # . # .
+                                        . . . . .
+                                        # . . . #
+                                        . # # # .`);
+        }
     }
 }
