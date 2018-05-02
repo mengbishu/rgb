@@ -738,18 +738,19 @@ namespace Matrix {
         return b;
     }
 
+
+
     //% weight=50 blockGap=8
     //% help=images/icon-image
     //% blockId=builtin_image block="icon image %i"
-
-    export function myicon(i: Pic): number {
+    //% i.fieldEditor="gridpicker"
+    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
+    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
+    export function myicon(i: Pic): void {
         switch (i) {
-            case Pic.smile:
-                return 1; 
-            case Pic.eagleEye:
-                return 2;
-            case Pic.embarrassed:
-                return 3;
+            case Pic.smile: break; 
+            case Pic.eagleEye:break;
+            case Pic.embarrassed: break;
         }
     }
 
