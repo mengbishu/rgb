@@ -790,6 +790,6 @@ namespace Matrix {
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
     export function showIcon(icon: Pic, interval = 600) {
         let res = myicon(icon)
-        //res.showImage(0, interval)
+        res.showImage(0, interval)
     }
 }
