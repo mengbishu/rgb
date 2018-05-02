@@ -784,10 +784,6 @@ namespace Matrix {
     //% blockId=basic_show_iconn
     //% block="show iconn %i" icon="\uf00a"
     //% parts="ledmatrix"
-    //% help=basic/show-icon
-    //% i.fieldEditor="gridpicker"
-    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
-    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
     export function showIconn(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
     }
