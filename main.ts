@@ -268,7 +268,7 @@ namespace Matrix {
         //% help=images/icon-image
         //% parts="ledmatrix"
         //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
-        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
+
 
 
 
