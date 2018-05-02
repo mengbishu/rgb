@@ -783,7 +783,7 @@ namespace Matrix {
     //% weight=90 blockGap=8
     //% blockId=basic_show_iconn
     //% block="show iconn %i" icon="\uf00a"
-    //% parts="ledmatrix"
+    //% parts="ledmatrix" i.fieldOptions.columns="5" 
     export function showIconn(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
     }
