@@ -24,7 +24,7 @@ enum NeoPixelColors {
 enum Pic {
     //% block="square"
     //% blockImage=1
-    Square,
+    Square = IconNames.Square,
     //% block="small square"
     //% blockImage=1
     SmallSquare,
