@@ -1,6 +1,3 @@
-/**
- * Well known colors for a NeoPixel strip
- */
 enum NeoPixelColors {
     //% block=red
     Red = 0xFF0000,
@@ -245,8 +242,8 @@ namespace Matrix {
         len: number;
 
         //% blockId="showPixel" block="%strip| display pixel x %x| y %y| color %color"
-        //% x.min=0 x.max=8
-        //% y.min=0 y.max=8
+        //% x.min=0 x.max=7
+        //% y.min=0 y.max=7
         setPixel(x: number, y: number, color: number): void { 
             let offset = y*8+x
             this.setPixelColor(offset, color)
@@ -266,12 +263,20 @@ namespace Matrix {
             }
         }
  
+        //% blockGap=50
         //% blockId="showIcons" block="%strip| display Icon %index"
+        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
             switch (index) {
                 case Pic.smile:
+                    images.createImage(`    
+                . . # . .
+                . # # # .
+                # . # . #
+                . . # . .
+                . . # . .`);    
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
@@ -533,8 +538,6 @@ namespace Matrix {
                 }
             }
         }
-
-
        
         //% blockId="clearPixel" block="%strip| clear pixel x %x| y %y"
         clearPixel(x: number, y: number): void{
@@ -543,13 +546,13 @@ namespace Matrix {
 
         //% blockId="showNumber" block="%strip| show number %num| color %color"
         //% parts="neopixel"
-        showNumber(num: number, color: NeoPixelColors): void { 
+        showNumber(num: number, color: number): void { 
             this.update();
             this.showString(num.toString(),color)
         }
 
         //% blockId="showString" block="%strip| display string %str| color %color"
-        showString(str: string, color: NeoPixelColors): void{
+        showString(str: string, color: number): void{
             let l = str.length;
             this.len = l+1;
             let i = 0;
@@ -577,7 +580,7 @@ namespace Matrix {
         }
 
         //% blockId="showCompass" block="%strip| display dir %dir| color %color"
-        showCompass(dir: _Dir, color: NeoPixelColors): void{
+        showCompass(dir: _Dir, color: number): void{
             let i=0;
             let j=0;
             let index=0;            
@@ -595,7 +598,7 @@ namespace Matrix {
         //% blockId="neopixel_set_strip_color" block="%strip|fill color %rgb" 
         //% weight=85 blockGap=8
         //% parts="neopixel"
-        showColor(rgb: NeoPixelColors) {
+        showColor(rgb: number) {
             this.update();
             this.setAllRGB(rgb);
             this.show();
