@@ -265,6 +265,7 @@ namespace Matrix {
  
         //% blockGap=50
         //% blockId="showIcons" block="%strip| display Icon %index"
+        //% parts="ledmatrix"
         //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
