@@ -263,12 +263,19 @@ namespace Matrix {
             }
         }
  
-
-
-
-        //% weight=50 blockGap=8
-        //% help=images/icon-image
+        //% blockGap=50
         //% blockId="showIcons" block="%strip| display Icon %index"
+        //% help=images/icon-image
+        //% parts="ledmatrix"
+        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
+        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
+
+
+        //% weight=90 blockGap=8
+        //% blockId=showIcons
+        //% block="%strip| display Icon %index" icon="\uf00a"
+        //% parts="ledmatrix"
+        //% help=basic/show-icon
         //% index.fieldEditor="gridpicker"
         //% index.fieldOptions.width="400" index.fieldOptions.columns="5"
         //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
