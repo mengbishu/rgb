@@ -272,12 +272,13 @@ namespace Matrix {
             this.update();
             switch (index) {
                 case Pic.smile:
-                    images.createImage(`    
+                    let res = images.createImage(`    
                 . . # . .
                 . # # # .
                 # . # . #
                 . . # . .
-                . . # . .`);    
+                . . # . .`);   
+                    res.showImage(0, 600);
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
