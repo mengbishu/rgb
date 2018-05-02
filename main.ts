@@ -743,11 +743,8 @@ namespace Matrix {
     //% blockId=builtin_image block="icon image %i"
 
     export function myicon(i: Pic): number {
-        switch (i) {
-            case Pic.smile: return 1; 
-            case Pic.eagleEye: return 2;
-            case Pic.embarrassed: return 3;
-        }
+        
+        return 0;
     }
 
 
