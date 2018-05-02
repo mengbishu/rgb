@@ -740,44 +740,12 @@ namespace Matrix {
 
     //% weight=50 blockGap=8
     //% help=images/icon-image
-    //% blockId=builtin_images block="icon images %i"
+    //% blockId=builtin_images block="aaaaaaaaicon images %i"
     //% i.fieldEditor="gridpicker"
     //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
     //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function myicon(i: Pic): Image {
-        let image = images.createImage(`
-        . # . # .
-        # # # # #
-        # # # # #
-        . # # # .
-        . . # . .`);
-        switch (i) {
-            case Pic.smile:
-                image = images.createImage(`
-                                        . # . # .
-                                        # # # # #
-                                        # # # # #
-                                        . # # # .
-                                        . . # . .`);
-                break;
-
-            case Pic.eagleEye: image = images.createImage(`
-                                        . . . . .
-                                        . # . # .
-                                        . # # # .
-                                        . . # . .
-                                        . . . . .`);
-                                        break;
-            //faces
-            case Pic.embarrassed: image = images.createImage(`
-                                        . . . . .
-                                        . # . # .
-                                        . . . . .
-                                        # . . . #
-                                        . # # # .`);
-                                        break;
-        }
-        return image;
+    export function myicon(i: IconNames) {
+       
     }
 
     //% weight=90 blockGap=8
