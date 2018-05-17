@@ -22,95 +22,92 @@ enum NeoPixelColors {
 }
 
 enum Pic {
-    //% block="square"
-    //% blockImage=1
-    Square = IconNames.Square,
-    //% block="small square"
-    //% blockImage=1
-    SmallSquare,
-    //% block="scissors"
-    //% blockImage=1
-    Scissors
-    // //% block=sad
-    // sad = 3,
-    // //% block=scaleEys
-    // scaleEys = 4,
-    // //% block=dumbfounded
-    // dumbfounded = 5,
-    // //% block=distress
-    // distress,
-    // //% block=spades
-    // spades,
-    // //% block=square
-    // square,
-    // //% block=glance
-    // glance,
-    // //% block=blink
-    // blink ,
-    // //% block=anger
-    // anger,
-    // //% block=crossEyed
-    // crossEyed,
-    // //% block=terrorist
-    // terrorist,
-    // //% block=dinosaurEgg
-    // dinosaurEgg,
-    // //% block=whale
-    // whale,
-    // //% block=grizzlies
-    // grizzlies,
-    // //% block=butterfly
-    // butterfly,
-    // //% block=dog
-    // dog,
-    // //% block=owl
-    // owl,
-    // //% block=rocket
-    // rocket,
-    // //% block=comma
-    // comma,
-    // //% block=exclamation
-    // exclamation,
-    // //% block=lifting
-    // lifting,
-    // //% block=peach
-    // peach,
-    // //% block=doubt
-    // doubt,
-    // //% block=left
-    // left,
-    // //% block=left
-    // right,
-    // //% block=down
-    // down,
-    // //% block=up
-    // up,
-    // //% block=true
-    // true,
-    // //% block=key
-    // key,
-    // //% block=hanger
-    // hanger,
-    // //% block=tv
-    // tv,
-    // //% block=sailing
-    // sailing,
-    // //% block=squirrel
-    // squirrel,
-    // //% block=et
-    // et,
-    // //% block=alien
-    // alien,
-    // //% block=mushroom
-    // mushroom,
-    // //% block=longEars
-    // longEars,
-    // //% block=surprised
-    // surprised,
-    // //% block=home
-    // home,
-    // //% block=false
-    // false
+    //% block=smile
+    smile = 0,
+    //% block=eagleEye
+    eagleEye = 1,
+    //% block=embarrassed
+    embarrassed = 2,
+    //% block=sad
+    sad = 3,
+    //% block=scaleEys
+    scaleEys = 4,
+    //% block=dumbfounded
+    dumbfounded = 5,
+    //% block=distress
+    distress,
+    //% block=spades
+    spades,
+    //% block=square
+    square,
+    //% block=glance
+    glance,
+    //% block=blink
+    blink ,
+    //% block=anger
+    anger,
+    //% block=crossEyed
+    crossEyed,
+    //% block=terrorist
+    terrorist,
+    //% block=dinosaurEgg
+    dinosaurEgg,
+    //% block=whale
+    whale,
+    //% block=grizzlies
+    grizzlies,
+    //% block=butterfly
+    butterfly,
+    //% block=dog
+    dog,
+    //% block=owl
+    owl,
+    //% block=rocket
+    rocket,
+    //% block=comma
+    comma,
+    //% block=exclamation
+    exclamation,
+    //% block=lifting
+    lifting,
+    //% block=peach
+    peach,
+    //% block=doubt
+    doubt,
+    //% block=left
+    left,
+    //% block=left
+    right,
+    //% block=down
+    down,
+    //% block=up
+    up,
+    //% block=true
+    true,
+    //% block=key
+    key,
+    //% block=hanger
+    hanger,
+    //% block=tv
+    tv,
+    //% block=sailing
+    sailing,
+    //% block=squirrel
+    squirrel,
+    //% block=et
+    et,
+    //% block=alien
+    alien,
+    //% block=mushroom
+    mushroom,
+    //% block=longEars
+    longEars,
+    //% block=surprised
+    surprised,
+    //% block=home
+    home,
+    //% block=false
+    false
     
 }
 
@@ -140,7 +137,7 @@ enum _Dir{
 /**
  * Functions to operate NeoPixel strips.
  */
-//% color=#0078D7 icon="\uf00a"
+//% color=#0078D7 icon="\uf1eb"
 namespace Matrix {
     /**
      * A NeoPixel strip
@@ -266,23 +263,18 @@ namespace Matrix {
             }
         }
  
-
-        //% weight=90 blockGap=8
-        //% blockId="showIcons" block="%strip| display Icon %index" icon="\uf00a"
-        //% parts="ledmatrix"
-        //% help=basic/show-icon
-        //% index.fieldEditor="gridpicker"
-        //% index.fieldOptions.width="400" index.fieldOptions.columns="5"
-        //% index.fieldOptions.itemColour="black" index.fieldOptions.tooltips="true"
+        //% blockGap=50
+        //% blockId="showIcons" block="%strip| display Icon %index"
+        //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
         showIcons(index:Pic): void{
             screen = [0];
             this.update();
             switch (index) {
-                case Pic.Square:
+                case Pic.smile:
                     screen = [0x00, 0x42, 0xE7, 0x42, 0x00, 0x42, 0x3C, 0x00];
                     this.display(0xFF00FF);
                     break;
-                case Pic.SmallSquare:
+                case Pic.eagleEye:
                     screen = [0x81, 0xC3, 0xA5, 0xFF, 0x00, 0x00, 0x00, 0x00];
                     this.display(0xFFFF00)
                     screen = [0x00, 0x00, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00];
@@ -290,226 +282,226 @@ namespace Matrix {
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7E, 0x3C];
                     this.display(0x8a2be2);
                     break;                    
-                case Pic.Scissors:
+                case Pic.embarrassed:
                     screen = [0x24, 0x24, 0x24, 0x42, 0x81, 0x00, 0x00, 0x00];
                     this.display(0x8a2be2);
                     screen = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x42];
                     this.display(0x00ffff);
                     break;                    
-                // case Pic.sad:
-                //     screen = [0x42,0xA5,0xA5,0xA5,0x00,0x00,0x00,0x00];
-                //     this.display(0x8a2be2);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x42];
-                //     this.display(0x0000ff); 
-                //     break;  
-                // case Pic.scaleEys:
-                //     screen = [0xF0,0x90,0x90,0xF0,0x00,0x00,0x00,0x00];
-                //     this.display(0x0000FF);
-                //     screen = [0x00,0x66,0x66,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0x4b0082);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x42,0x7E,0x42];
-                //     this.display(0xFFFF00);
-                //     break;  
-                // case Pic.dumbfounded:
-                //     screen = [0x00,0x00,0x42,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0xFFFF00);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x3C,0x42,0x00];
-                //     this.display(0xFF0000); 
-                //     break;  
-                // case Pic.distress:
-                //     screen = [0x20,0x47,0x80,0x00,0x00,0x00,0x3C,0x42];
-                //     this.display(0x4b0082);
-                //     screen = [0x00,0x00,0x00,0x24,0x00,0x00,0x00,0x00];
-                //     this.display(0xFF00FF);
-                //     break;                    
-                // case Pic.spades:
-                //     screen = [0x18,0x3C,0x7E,0xFF,0xFF,0x5A,0x18,0x3C];
-                //     this.display(0x8a2be2);
-                //     break;
-                // case Pic.square:
-                //     screen = [0x18, 0x3C, 0x7E, 0xFF, 0xFF, 0x7E, 0x3C, 0x18];
-                //     this.display(0xFF0000);
-                //     break;    
-                // case Pic.glance:
-                //     screen = [0x00,0xE7,0x63,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0xaaaaaf);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x0C,0x3C,0x00];
-                //     this.display(0x0000ff);
-                //     break;
-                // case Pic.blink:
-                //     screen = [0x00,0xE2,0xE4,0xE7,0x00,0x00,0x00,0x00];
-                //     this.display(0xaaaaaf);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x42,0x3C,0x00];
-                //     this.display(0x00ffaa);
-                //     break;
-                // case Pic.anger:
-                //     screen = [0x80,0x42,0x24,0xE6,0x00,0x00,0x00,0x00];
-                //     this.display(0xFF0000);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x42];
-                //     this.display(0xaaaaaf);
-                //     break;
-                // case Pic.crossEyed:
-                //     screen = [0x24,0xE7,0x24,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0xFFA500);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x3C,0x3C,0x00];
-                //     this.display(0xFF00FF);
-                //     break;
-                // case Pic.terrorist:
-                //     screen = [0x81,0x66,0x00,0x00,0x00,0x00,0x3C,0x42];
-                //     this.display(0xFF0000);
-                //     screen = [0x00,0x00,0x00,0x66,0x00,0x00,0x00,0x00];
-                //     this.display(0xCD6839);
-                //     break;
-                // case Pic.dinosaurEgg:
-                //     screen = [0x24,0x66,0xE7,0xE7,0x66,0x24,0x00,0x00];
-                //     this.display(0x8a2be2);
-                //     screen = [0x10,0x10,0x10,0x10,0x10,0x10,0x00,0x00];
-                //     this.display(0x00FF00);
-                //     screen = [0x08,0x08,0x08,0x08,0x08,0x08,0x00,0x00];
-                //     this.display(0x4b0082);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x40,0x83,0xFF];
-                //     this.display(0xFFFFFF);
-                //     break;
-                // case Pic.whale:
-                //     screen = [0x44,0x28,0x10,0x00,0x00,0x30,0x78,0xFC];
-                //     this.display(0xFFFFFF);
-                //     screen = [0x00,0x00,0x00,0x30,0x78,0xCD,0x87,0x03];
-                //     this.display(0x0000FF);
-                //     break;
-                // case Pic.grizzlies:
-                //     screen = [0xC3,0xC3,0x00,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0xFFFFFF);
-                //     screen = [0x00,0x00,0x00,0x18,0x3C,0x3C,0x99,0x7E];
-                //     this.display(0xCD6839);
-                //     break;
-                // case Pic.butterfly:
-                //     screen = [0x66, 0x99, 0x81, 0x42, 0x24, 0x42, 0x42, 0x24];
-                //     this.display(0x00FF00);
-                //     break;    
-                // case Pic.dog:
-                //     screen = [0xC3,0xC3,0x7E,0x5A,0x7E,0x7E,0xC3,0xFF];
-                //     this.display(0xaaaaaf);
-                //     break;                    
-                // case Pic.owl:
-                //     screen = [0x42,0x66,0x7E,0xFF,0xDB,0xFF,0x7E,0x3C];
-                //     this.display(0x00FF00);
-                //     break;                    
-                // case Pic.rocket:
-                //     screen = [0x18,0x18,0x00,0x00,0x00,0x00,0x00,0xA5];
-                //     this.display(0xFF0000);
-                //     screen = [0x00,0x24,0x24,0x24,0x24,0x24,0x00,0x00];
-                //     this.display(0xFFFFFF);
-                //     screen = [0x00,0x18,0x18,0x00,0x00,0x00,0x5A,0x00];
-                //     this.display(0xFFFF00);
-                //     screen = [0x00,0x00,0x00,0x00,0x18,0x18,0x00,0x00];
-                //     this.display(0x00FF00);
-                //     break;
-                // case Pic.comma:
-                //     screen = [0x7E,0x7E,0x7E,0x7E,0x7E,0x00,0x00,0x00];
-                //     this.display(0x0000FF);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x0E,0x0C,0x18];
-                //     this.display(0xaaaaaf);
-                //     break;
-                // case Pic.exclamation:
-                //     screen = [0x18,0x18,0x18,0x18,0x18,0x00,0x18,0x18];
-                //     this.display(0x0000FF);
-                //     break;                    
-                // case Pic.lifting:
-                //     screen = [0x00,0x42,0xC3,0xC3,0xC3,0xC3,0x42,0x00];
-                //     this.display(0x0000FF);
-                //     screen = [0x00,0x00,0x00,0x3C,0x3C,0x00,0x00,0x00];
-                //     this.display(0x4b0082);
-                //     break;
-                // case Pic.peach:
-                //     screen = [0x00, 0x66, 0xFF, 0xFF, 0xFF, 0x7E, 0x3C, 0x18];
-                //     this.display(0xFF0000);
-                //     break;                    
-                // case Pic.doubt:
-                //     screen = [0x3C,0x7E,0x66,0x06,0x0C,0x18,0x00,0x18];
-                //     this.display(0x0000FF);
-                //     break;    
-                // case Pic.left:
-                //     screen = [0x00,0x20,0x60,0xFF,0xFF,0x60,0x20,0x00];
-                //     this.display(0x00FF00);
-                //     break;
-                // case Pic.right:
-                //     screen = [0x00,0x04,0x06,0xFF,0xFF,0x06,0x04,0x00];
-                //     this.display(0x00FF00);
-                //     break;                    
-                // case Pic.down:
-                //     screen = [0x18,0x18,0x18,0x18,0x18,0x7E,0x3C,0x18];
-                //     this.display(0x00FF00);
-                //     break;                    
-                // case Pic.up:
-                //     screen = [0x18,0x3C,0x7E,0x18,0x18,0x18,0x18,0x18];
-                //     this.display(0x00FF00);
-                //     break;                    
-                // case Pic.true:
-                //     screen = [0x00,0x00,0x03,0x06,0xCC,0x78,0x30,0x00];
-                //     this.display(0xFF0000);
-                //     break;    
-                // case Pic.key:
-                //     screen = [0x38,0x08,0x38,0x08,0x00,0x00,0x00,0x00];
-                //     this.display(0xFFFFFF);
-                //     screen = [0x00,0x00,0x00,0x00,0x7E,0x42,0x42,0x7E];
-                //     this.display(0x0000FF);
-                //     break;                    
-                // case Pic.hanger:
-                //     screen = [0x00,0x00,0x00,0x18,0x24,0x42,0x81,0xFF];
-                //     this.display(0x00FF00);
-                //     screen = [0x18,0x24,0x04,0x00,0x00,0x00,0x00,0x00];
-                //     this.display(0xFFA500);
-                //     break;                    
-                // case Pic.tv:
-                //     screen = [0x81,0x42,0x24,0x7E,0x42,0x42,0x42,0x7E];
-                //     this.display(0x0000FF);
-                //     screen = [0x00,0x00,0x00,0x00,0x3C,0x3C,0x3C,0x00];
-                //     this.display(0x00ff00);
-                //     break;                    
-                // case Pic.sailing:
-                //     screen = [0x10,0x10,0x10,0x10,0x10,0xFF,0x7E,0x3C];
-                //     this.display(0x4b0082);
-                //     screen = [0x00,0x08,0x0C,0x08,0x00,0x00,0x00,0x00];
-                //     this.display(0xFF0000);
-                //     break;                    
-                // case Pic.squirrel:
-                //     screen = [0x00,0x00,0x00,0x24,0x00,0x18,0x3C,0x7E];
-                //     this.display(0xFFFFFF);
-                //     screen = [0x24,0x24,0x3C,0x5A,0xFF,0xE7,0xC3,0x00];
-                //     this.display(0xFFA500);
-                //     break;
-                // case Pic.et:
-                //     screen = [0x3C,0xFF,0x99,0xFF,0x7E,0x3C,0x5A,0x81];
-                //     this.display(0xFF00FF);
-                //     break;                    
-                // case Pic.alien:
-                //     screen = [0x81,0x42,0x3C,0xFF,0x99,0xFF,0x7E,0x3C];
-                //     this.display(0x4b0082);
-                //     break;
-                // case Pic.mushroom:
-                //     screen = [0x18,0x3C,0x7E,0xFF,0xC9,0xDB,0x00,0x00];
-                //     this.display(0xFFA500);
-                //     screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x7E,0x66];
-                //     this.display(0x00FF00);
-                //     break;                    
-                // case Pic.longEars:
-                //     screen = [0xE7,0x3C,0x7E,0x5A,0xFF,0xBD,0x3C,0x7E];
-                //     this.display(0xFFA500);
-                //     break;
-                // case Pic.surprised:
-                //     screen = [0x24,0x7E,0x5A,0xFF,0xFF,0x66,0x66,0x24];
-                //     this.display(0x0000FF);
-                //     break;
-                // case Pic.home:
-                //     screen = [0x18,0x3C,0x7E,0xFF,0x00,0x00,0x00,0x00];
-                //     this.display(0x0000FF);
-                //     screen = [0x02,0x02,0x00,0x00,0x5E,0x7E,0x7A,0x7A];
-                //     this.display(0xaaaaaf);
-                //     break;                    
-                // case Pic.false:
-                //     screen = [0x00,0x42,0x24,0x18,0x18,0x24,0x42,0x00];
-                //     this.display(0x0000FF);
-                //     break;                    
+                case Pic.sad:
+                    screen = [0x42,0xA5,0xA5,0xA5,0x00,0x00,0x00,0x00];
+                    this.display(0x8a2be2);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x42];
+                    this.display(0x0000ff); 
+                    break;  
+                case Pic.scaleEys:
+                    screen = [0xF0,0x90,0x90,0xF0,0x00,0x00,0x00,0x00];
+                    this.display(0x0000FF);
+                    screen = [0x00,0x66,0x66,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0x4b0082);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x42,0x7E,0x42];
+                    this.display(0xFFFF00);
+                    break;  
+                case Pic.dumbfounded:
+                    screen = [0x00,0x00,0x42,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0xFFFF00);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x3C,0x42,0x00];
+                    this.display(0xFF0000); 
+                    break;  
+                case Pic.distress:
+                    screen = [0x20,0x47,0x80,0x00,0x00,0x00,0x3C,0x42];
+                    this.display(0x4b0082);
+                    screen = [0x00,0x00,0x00,0x24,0x00,0x00,0x00,0x00];
+                    this.display(0xFF00FF);
+                    break;                    
+                case Pic.spades:
+                    screen = [0x18,0x3C,0x7E,0xFF,0xFF,0x5A,0x18,0x3C];
+                    this.display(0x8a2be2);
+                    break;
+                case Pic.square:
+                    screen = [0x18, 0x3C, 0x7E, 0xFF, 0xFF, 0x7E, 0x3C, 0x18];
+                    this.display(0xFF0000);
+                    break;    
+                case Pic.glance:
+                    screen = [0x00,0xE7,0x63,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0xaaaaaf);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x0C,0x3C,0x00];
+                    this.display(0x0000ff);
+                    break;
+                case Pic.blink:
+                    screen = [0x00,0xE2,0xE4,0xE7,0x00,0x00,0x00,0x00];
+                    this.display(0xaaaaaf);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x42,0x3C,0x00];
+                    this.display(0x00ffaa);
+                    break;
+                case Pic.anger:
+                    screen = [0x80,0x42,0x24,0xE6,0x00,0x00,0x00,0x00];
+                    this.display(0xFF0000);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x42];
+                    this.display(0xaaaaaf);
+                    break;
+                case Pic.crossEyed:
+                    screen = [0x24,0xE7,0x24,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0xFFA500);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x3C,0x3C,0x00];
+                    this.display(0xFF00FF);
+                    break;
+                case Pic.terrorist:
+                    screen = [0x81,0x66,0x00,0x00,0x00,0x00,0x3C,0x42];
+                    this.display(0xFF0000);
+                    screen = [0x00,0x00,0x00,0x66,0x00,0x00,0x00,0x00];
+                    this.display(0xCD6839);
+                    break;
+                case Pic.dinosaurEgg:
+                    screen = [0x24,0x66,0xE7,0xE7,0x66,0x24,0x00,0x00];
+                    this.display(0x8a2be2);
+                    screen = [0x10,0x10,0x10,0x10,0x10,0x10,0x00,0x00];
+                    this.display(0x00FF00);
+                    screen = [0x08,0x08,0x08,0x08,0x08,0x08,0x00,0x00];
+                    this.display(0x4b0082);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x40,0x83,0xFF];
+                    this.display(0xFFFFFF);
+                    break;
+                case Pic.whale:
+                    screen = [0x44,0x28,0x10,0x00,0x00,0x30,0x78,0xFC];
+                    this.display(0xFFFFFF);
+                    screen = [0x00,0x00,0x00,0x30,0x78,0xCD,0x87,0x03];
+                    this.display(0x0000FF);
+                    break;
+                case Pic.grizzlies:
+                    screen = [0xC3,0xC3,0x00,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0xFFFFFF);
+                    screen = [0x00,0x00,0x00,0x18,0x3C,0x3C,0x99,0x7E];
+                    this.display(0xCD6839);
+                    break;
+                case Pic.butterfly:
+                    screen = [0x66, 0x99, 0x81, 0x42, 0x24, 0x42, 0x42, 0x24];
+                    this.display(0x00FF00);
+                    break;    
+                case Pic.dog:
+                    screen = [0xC3,0xC3,0x7E,0x5A,0x7E,0x7E,0xC3,0xFF];
+                    this.display(0xaaaaaf);
+                    break;                    
+                case Pic.owl:
+                    screen = [0x42,0x66,0x7E,0xFF,0xDB,0xFF,0x7E,0x3C];
+                    this.display(0x00FF00);
+                    break;                    
+                case Pic.rocket:
+                    screen = [0x18,0x18,0x00,0x00,0x00,0x00,0x00,0xA5];
+                    this.display(0xFF0000);
+                    screen = [0x00,0x24,0x24,0x24,0x24,0x24,0x00,0x00];
+                    this.display(0xFFFFFF);
+                    screen = [0x00,0x18,0x18,0x00,0x00,0x00,0x5A,0x00];
+                    this.display(0xFFFF00);
+                    screen = [0x00,0x00,0x00,0x00,0x18,0x18,0x00,0x00];
+                    this.display(0x00FF00);
+                    break;
+                case Pic.comma:
+                    screen = [0x7E,0x7E,0x7E,0x7E,0x7E,0x00,0x00,0x00];
+                    this.display(0x0000FF);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x0E,0x0C,0x18];
+                    this.display(0xaaaaaf);
+                    break;
+                case Pic.exclamation:
+                    screen = [0x18,0x18,0x18,0x18,0x18,0x00,0x18,0x18];
+                    this.display(0x0000FF);
+                    break;                    
+                case Pic.lifting:
+                    screen = [0x00,0x42,0xC3,0xC3,0xC3,0xC3,0x42,0x00];
+                    this.display(0x0000FF);
+                    screen = [0x00,0x00,0x00,0x3C,0x3C,0x00,0x00,0x00];
+                    this.display(0x4b0082);
+                    break;
+                case Pic.peach:
+                    screen = [0x00, 0x66, 0xFF, 0xFF, 0xFF, 0x7E, 0x3C, 0x18];
+                    this.display(0xFF0000);
+                    break;                    
+                case Pic.doubt:
+                    screen = [0x3C,0x7E,0x66,0x06,0x0C,0x18,0x00,0x18];
+                    this.display(0x0000FF);
+                    break;    
+                case Pic.left:
+                    screen = [0x00,0x20,0x60,0xFF,0xFF,0x60,0x20,0x00];
+                    this.display(0x00FF00);
+                    break;
+                case Pic.right:
+                    screen = [0x00,0x04,0x06,0xFF,0xFF,0x06,0x04,0x00];
+                    this.display(0x00FF00);
+                    break;                    
+                case Pic.down:
+                    screen = [0x18,0x18,0x18,0x18,0x18,0x7E,0x3C,0x18];
+                    this.display(0x00FF00);
+                    break;                    
+                case Pic.up:
+                    screen = [0x18,0x3C,0x7E,0x18,0x18,0x18,0x18,0x18];
+                    this.display(0x00FF00);
+                    break;                    
+                case Pic.true:
+                    screen = [0x00,0x00,0x03,0x06,0xCC,0x78,0x30,0x00];
+                    this.display(0xFF0000);
+                    break;    
+                case Pic.key:
+                    screen = [0x38,0x08,0x38,0x08,0x00,0x00,0x00,0x00];
+                    this.display(0xFFFFFF);
+                    screen = [0x00,0x00,0x00,0x00,0x7E,0x42,0x42,0x7E];
+                    this.display(0x0000FF);
+                    break;                    
+                case Pic.hanger:
+                    screen = [0x00,0x00,0x00,0x18,0x24,0x42,0x81,0xFF];
+                    this.display(0x00FF00);
+                    screen = [0x18,0x24,0x04,0x00,0x00,0x00,0x00,0x00];
+                    this.display(0xFFA500);
+                    break;                    
+                case Pic.tv:
+                    screen = [0x81,0x42,0x24,0x7E,0x42,0x42,0x42,0x7E];
+                    this.display(0x0000FF);
+                    screen = [0x00,0x00,0x00,0x00,0x3C,0x3C,0x3C,0x00];
+                    this.display(0x00ff00);
+                    break;                    
+                case Pic.sailing:
+                    screen = [0x10,0x10,0x10,0x10,0x10,0xFF,0x7E,0x3C];
+                    this.display(0x4b0082);
+                    screen = [0x00,0x08,0x0C,0x08,0x00,0x00,0x00,0x00];
+                    this.display(0xFF0000);
+                    break;                    
+                case Pic.squirrel:
+                    screen = [0x00,0x00,0x00,0x24,0x00,0x18,0x3C,0x7E];
+                    this.display(0xFFFFFF);
+                    screen = [0x24,0x24,0x3C,0x5A,0xFF,0xE7,0xC3,0x00];
+                    this.display(0xFFA500);
+                    break;
+                case Pic.et:
+                    screen = [0x3C,0xFF,0x99,0xFF,0x7E,0x3C,0x5A,0x81];
+                    this.display(0xFF00FF);
+                    break;                    
+                case Pic.alien:
+                    screen = [0x81,0x42,0x3C,0xFF,0x99,0xFF,0x7E,0x3C];
+                    this.display(0x4b0082);
+                    break;
+                case Pic.mushroom:
+                    screen = [0x18,0x3C,0x7E,0xFF,0xC9,0xDB,0x00,0x00];
+                    this.display(0xFFA500);
+                    screen = [0x00,0x00,0x00,0x00,0x00,0x00,0x7E,0x66];
+                    this.display(0x00FF00);
+                    break;                    
+                case Pic.longEars:
+                    screen = [0xE7,0x3C,0x7E,0x5A,0xFF,0xBD,0x3C,0x7E];
+                    this.display(0xFFA500);
+                    break;
+                case Pic.surprised:
+                    screen = [0x24,0x7E,0x5A,0xFF,0xFF,0x66,0x66,0x24];
+                    this.display(0x0000FF);
+                    break;
+                case Pic.home:
+                    screen = [0x18,0x3C,0x7E,0xFF,0x00,0x00,0x00,0x00];
+                    this.display(0x0000FF);
+                    screen = [0x02,0x02,0x00,0x00,0x5E,0x7E,0x7A,0x7A];
+                    this.display(0xaaaaaf);
+                    break;                    
+                case Pic.false:
+                    screen = [0x00,0x42,0x24,0x18,0x18,0x24,0x42,0x00];
+                    this.display(0x0000FF);
+                    break;                    
             }                
         }
 
@@ -736,27 +728,5 @@ namespace Matrix {
     function unpackB(rgb: number): number {
         let b = (rgb) & 0xFF;
         return b;
-    }
-
-    //% weight=50 blockGap=8
-    //% help=images/icon-image
-    //% blockId=builtin_images block="aaaaaaaaicon images %i"
-    //% i.fieldEditor="gridpicker"
-    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
-    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function myicon(i: Pic) {
-        let a = 1;
-    }
-
-    //% weight=90 blockGap=8
-    //% blockId=basic_show_iconn
-    //% block="show iconn %i" icon="\uf00a"
-    //% parts="ledmatrix"
-    //% help=basic/show-icon
-    //% i.fieldEditor="gridpicker"
-    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
-    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
-    export function showIconn(i: IconNames, interval = 600) {
-        let a = 1;
     }
 }
